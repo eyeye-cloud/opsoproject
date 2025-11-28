@@ -3,112 +3,74 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>나만의 힐링송 - 메인</title>
+  <title>나만의 힐링송 – 사계절 뷰어</title>
   <link rel="stylesheet" href="style.css">
 </head>
-<body class="main-page">
-  <dic class="snap-container">
-      <section class="snap-section full-header">
-        <header class="main-header">
-          <h1>나만의 힐링송</h1>
-          <p>계절별로 만나는 나의 플레이리스트</p>
-        </header>
-      </section>
-
-      <section class="snap-section season-section">
-        <main class="season-grid">
-          <!-- 봄 -->
-          <a href="spring.html" class="season-tile spring-tile">
-            <div class="tile-overlay"></div>
-            <div class="tile-content">
-              <h2>봄</h2>
-              <p class="tile-desc">벚꽃</p>
-              <span class="tile-theme">미숙함, 어색함과 새로움</span>
-            </div>
-            <div class="tile-icon">🌸</div>
-          </a>
-
-          <!-- 여름 -->
-          <a href="summer.html" class="season-tile summer-tile">
-            <div class="tile-overlay"></div>
-            <div class="tile-content">
-              <h2>여름</h2>
-              <p class="tile-desc">바다</p>
-              <span class="tile-theme">일상과 연결, 일상의 안정</span>
-            </div>
-            <div class="tile-icon">🌊</div>
-          </a>
-
-          <!-- 가을 -->
-          <a href="autumn.html" class="season-tile autumn-tile">
-            <div class="tile-overlay"></div>
-            <div class="tile-content">
-              <h2>가을</h2>
-              <p class="tile-desc">단풍, 낙엽</p>
-              <span class="tile-theme">과거에 대한 회상, 감성</span>
-            </div>
-            <div class="tile-icon">🍂</div>
-          </a>
-
-          <!-- 겨울 -->
-          <a href="winter.html" class="season-tile winter-tile">
-            <div class="tile-overlay"></div>
-            <div class="tile-content">
-              <h2>겨울</h2>
-              <p class="tile-desc">눈, 소나무</p>
-              <span class="tile-theme">유난히 길었던 겨울, 스스로에 대한 위로</span>
-            </div>
-            <div class="tile-icon">❄️</div>
-          </a>
-        </main>
-      </section>
-
+<body>
+  <!-- 환영 화면 (스크롤 parallax) -->
+  <div id="welcomeScreen">
+    <h1>사계</h1>
+    <div class="arrow">↓</div>
   </div>
 
-  <script>
-    // 타일 호버 효과 (마우스 위치 기반 좀 더 부드러운 애니메이션)
-    document.querySelectorAll('.season-tile').forEach(tile => {
-      tile.addEventListener('mouseenter', function() {
-        this.style.transform = 'scale(1.02)';
-      });
-      tile.addEventListener('mouseleave', function() {
-        this.style.transform = 'scale(1)';
-      });
-    });
-  </script>
+  <!-- 메인 4분할 뷰 -->
+  <div id="mainScreen">
+    <div class="season-grid">
+      <!-- 봄 -->
+      <button class="season-tile spring" data-season="spring">
+        <div class="tile-overlay"></div>
+        <div class="tile-content">
+          <h2>봄</h2>
+          <div class="tile-desc">벚꽃</div>
+          <div class="tile-theme">미숙함, 어색함과 새로움</div>
+        </div>
+        <div class="tile-icon">🌸</div>
+      </button>
+      <!-- 여름 -->
+      <button class="season-tile summer" data-season="summer">
+        <div class="tile-overlay"></div>
+        <div class="tile-content">
+          <h2>여름</h2>
+          <div class="tile-desc">바다</div>
+          <div class="tile-theme">일상과 연결, 일상의 안정</div>
+        </div>
+        <div class="tile-icon">🌊</div>
+      </button>
+      <!-- 가을 -->
+      <button class="season-tile autumn" data-season="autumn">
+        <div class="tile-overlay"></div>
+        <div class="tile-content">
+          <h2>가을</h2>
+          <div class="tile-desc">단풍, 낙엽</div>
+          <div class="tile-theme">과거에 대한 회상, 감성</div>
+        </div>
+        <div class="tile-icon">🍂</div>
+      </button>
+      <!-- 겨울 -->
+      <button class="season-tile winter" data-season="winter">
+        <div class="tile-overlay"></div>
+        <div class="tile-content">
+          <h2>겨울</h2>
+          <div class="tile-desc">눈, 소나무</div>
+          <div class="tile-theme">유난히 길었던 겨울, 스스로에 대한 위로</div>
+        </div>
+        <div class="tile-icon">❄️</div>
+      </button>
+    </div>
+  </div>
 
-  <script>
-  document.addEventListener("DOMContentLoaded", () => {
-    const sections = document.querySelectorAll(".snap-section");
-    let index = 0;            // 현재 섹션 번호
-    let isScrolling = false;  // 중복 스크롤 방지
+  <!-- 계절별 상세 뷰 (초기 숨김) -->
+  <div id="seasonDetailScreen">
+    <header class="detail-header">
+      <button class="back-btn" id="backBtn">← 돌아가기</button>
+      <h1 id="seasonTitle"></h1>
+      <div class="season-desc" id="seasonDesc"></div>
+    </header>
+    <main class="detail-main">
+      <section class="season-detail" id="seasonSection"></section>
+    </main>
+  </div>
 
-    const threshold = 10;
-
-    window.addEventListener("wheel", (e) => {
-      if (isScrolling) return;
-      if (Math.abs(e.deltaY) < threshold) return;
-      isScrolling = true;
-
-      if (e.deltaY > 0) {
-        // 아래로 스크롤 → 다음 섹션
-        index = Math.min(index + 1, sections.length - 1);
-      } else {
-        // 위로 스크롤 → 이전 섹션
-        index = Math.max(index - 1, 0);
-      }
-
-      sections[index].scrollIntoView({
-        behavior: "smooth"
-      });
-
-      // 스크롤 애니메이션 끝난 뒤 다시 스크롤 가능하게
-      setTimeout(() => {
-        isScrolling = false;
-      }, 700); // 애니메이션 시간과 맞추기
-    });
-  });
-  </script>
-
+  <script src="detail.js"></script>
 </body>
 </html>
