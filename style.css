@@ -28,7 +28,6 @@ body {
 
 /* ===== 환영 화면 (스크롤 parallax) ===== */
 #welcomeScreen {
-  position: fixed;
   top: 0;
   left: 0;
   width: 100vw;
@@ -43,6 +42,7 @@ body {
 }
 
 #welcomeScreen h1 {
+  position: fixed;
   font-size: 8vw;
   font-weight: 700;
   letter-spacing: 0.1em;
@@ -54,12 +54,19 @@ body {
   transition: transform 0.1s, opacity 0.1s;
 }
 
+/* 화살표 스타일 업데이트 */
 #welcomeScreen .arrow {
-  font-size: 2.5rem;
-  margin-top: 40px;
+  margin-top: 500px;
   animation: bounce 2s infinite;
   opacity: 1;
   transition: opacity 0.1s;
+}
+
+.arrow svg {
+  width: 3rem;
+  height: 3rem;
+  stroke: #272742; /* 흰 배경이므로 어두운 색으로 지정 */
+  filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.1));
 }
 
 @keyframes bounce {

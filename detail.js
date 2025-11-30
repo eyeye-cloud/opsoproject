@@ -127,7 +127,11 @@ window.addEventListener('scroll', () => {
     const scale = Math.max(0.8, 1 - (scrollY / welcomeHeight * 0.3));
     welcomeScreen.style.opacity = opacity;
     welcomeScreen.querySelector('h1').style.transform = `scale(${scale}) translateY(${scrollY * 0.4}px)`;
-    welcomeScreen.querySelector('.arrow').style.opacity = opacity;
+    
+    // 화살표는 투명도만 조절
+    const arrow = welcomeScreen.querySelector('.arrow');
+    if (arrow) arrow.style.opacity = opacity;
+
     welcomeScreen.style.pointerEvents = opacity > 0 ? 'auto' : 'none';
   } else {
     welcomeScreen.style.opacity = 0;
