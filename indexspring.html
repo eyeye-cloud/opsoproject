@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<div class="container">
+        <link rel="stylesheet" href="stylespring.css"> 
+        <div class="header">
+            <div class="header-icons">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <circle cx="12" cy="12" r="10"></circle>
+                    <circle cx="12" cy="12" r="6"></circle>
+                    <circle cx="12" cy="1" r="1"></circle>
+                </svg>
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <rect x="3" y="5" width="18" height="14" rx="2"></rect>
+                    <path d="M7 15v4M12 15v4M17 15v4M5 8h14"></path>
+                </svg>
+            </div>
+            <h1>Film Archive</h1>
+            <p class="subtitle">청춘과 사랑을 담은 두 장의 필름</p>
+            <div class="dots">
+                <div class="dot"></div>
+                <div class="dot"></div>
+                <div class="dot"></div>
+            </div>
+        </div>
+</head>
+<body>
+        <div>
+            <div class="film-strip">
+                <div class="film-perforations film-perforations-left" id="perf1left"></div>
+                <div class="film-perforations film-perforations-right" id="perf1right"></div>
+                
+                <div class="film-content">
+                    <div class="film-grid">
+                        <div class="film-image">
+                            <img src="나의 사춘기에게.jpg" alt="흔들리는 꽃">
+                            <div class="film-overlay"></div>
+                            <div class="frame-number">FRAME 01</div>
+                        </div>
+                        
+                        <div class="film-text amber">
+                            <div>
+                                <p class="track-label amber">TRACK 01</p>
+                                <p class="artist-name">볼빨간 사춘기</p>
+                                <h2 class="song-title amber">나의 사춘기에게</h2>
+                            </div>
+
+                            <div class="quote-box amber">
+                                <p class="quote-line">흔들리지 않고 피는 꽃이 어디 있으랴</p>
+                                <p class="quote-line">이 세상 그 어떤 아름다운 꽃들도</p>
+                                <p class="quote-line">다 흔들리며 피었나니</p>
+                                <p class="quote-source">- 도종환, 「흔들리며 피는 꽃」 중</p>
+                            </div>
+
+                            <p class="description">
+                                사춘기의 흔들림은 연약함이 아니라 성장의 증거입니다. 
+                                모든 아름다운 것들은 바람에 흔들리며 더 단단해집니다.
+                            </p>
+
+                            <div class="timestamp amber">
+                                <p class="timestamp-text">DEVELOPED: 2024 • KODAK PORTRA 400</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="film-strip">
+                <div class="film-perforations film-perforations-left" id="perf2left"></div>
+                <div class="film-perforations film-perforations-right" id="perf2right"></div>
+                
+                <div class="film-content">
+                    <div class="film-grid" style="direction: rtl;">
+                        <div style="direction: ltr;">
+                            <div class="film-text rose">
+                                <div>
+                                    <p class="track-label rose">TRACK 02</p>
+                                    <p class="artist-name">악동뮤지션</p>
+                                    <h2 class="song-title rose">Give Love</h2>
+                                </div>
+
+                                <div class="quote-box rose">
+                                    <p class="quote-line">사랑은 주는 것,</p>
+                                    <p class="quote-line">다 주고도 더 주고 싶어지는 것,</p>
+                                    <p class="quote-line">받지 못해도 멈추지 못하는 것.</p>
+                                    <p class="quote-source">- 정호승 시집, 「사랑하다가 죽어버려라」 중</p>
+                                </div>
+
+                                <p class="description">
+                                    진정한 사랑은 받기를 기대하지 않고 주는 것입니다. 
+                                    악동뮤지션의 따뜻한 멜로디가 순수한 사랑의 마음을 담아 전합니다.
+                                </p>
+
+                                <div class="timestamp rose">
+                                    <p class="timestamp-text">DEVELOPED: 2024 • FUJIFILM SUPERIA 400</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="film-image" style="direction: ltr;">
+                            <img src="Give love.jpg" alt="사랑을 주는 마음">
+                            <div class="film-overlay"></div>
+                            <div class="frame-number">FRAME 02</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer">
+            <div class="footer-content">
+                <p class="footer-text">MUSIC × POETRY COLLECTION</p>
+            </div>
+        </div>
+    </div>
+</body>
+
+<script>
+        function createPerforations() {
+            const containers = [
+                { left: 'perf1left', right: 'perf1right' },
+                { left: 'perf2left', right: 'perf2right' }
+            ];
+
+            containers.forEach(({ left, right }) => {
+                [left, right].forEach(id => {
+                    const container = document.getElementById(id);
+                    container.innerHTML = '';
+                    for (let i = 0; i < 8; i++) {
+                        const hole = document.createElement('div');
+                        hole.className = 'perforation-hole';
+                        container.appendChild(hole);
+                    }
+                });
+            });
+        }
+
+        document.addEventListener('DOMContentLoaded', function() {
+            createPerforations();
+        });
+</script>
