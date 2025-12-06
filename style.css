@@ -138,7 +138,7 @@ body {
     position: absolute;
     top: 1000px;
     left: 0px;
-    opacity: 0.6;
+    opacity: 0.75;
     overflow: hidden;
     mask-image: 
         linear-gradient(to bottom, black 70%, transparent 100%);
@@ -160,7 +160,7 @@ body {
     position: absolute;
     top: 1148px;
     left: 380.2px;
-    opacity: 0.6;
+    opacity: 0.75;
     overflow: hidden;
     mask-image:
         linear-gradient(to top, black 70%, transparent 100%);
@@ -182,7 +182,7 @@ body {
     position: absolute;
     top: 1000px;
     right: 380.2px;
-    opacity: 0.6;
+    opacity: 0.67;
     overflow: hidden;
     mask-image: 
         linear-gradient(to bottom, black 70%, transparent 100%);
@@ -204,7 +204,7 @@ body {
     position: absolute;
     top: 1148px;
     right: 0px;
-    opacity: 0.6;
+    opacity: 0.75;
     overflow: hidden;
     mask-image:
         linear-gradient(to top, black 70%, transparent 100%);
