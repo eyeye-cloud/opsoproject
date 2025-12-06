@@ -9,16 +9,21 @@
             --color-amber-50: #fffbeb;
             --color-rose-950: #32490b;
             --color-rose-900: #070707;
-            --color-rose-700: #be1820;
-            --color-rose-400: #fb7185;
-            --color-rose-100: #ffe4e6;
-            --color-rose-50: #fff7ed;
+            --color-rose-700: #5cbe57;
+            --color-rose-400: #a0d578;
+            --color-rose-100: #dbffc2;
+            --color-rose-50: #e2f4c5;
         }
 
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
+        }
+        
+        .italiana-regular {
+        font-family: 'Italiana', sans-serif;
+        font-style: normal;
         }
 
         body {
@@ -59,15 +64,20 @@
         }
 
         h1 {
-            font-size: 3rem;
-            font-weight: 700;
+            font-size: 3.5rem;
+            font-weight: 800;
             color: #0c0c0c;
-            margin-bottom: 0.75rem;
+            margin-bottom: 0.2rem;
+            font-family: 'Italiana', sans-serif;
+            letter-spacing: 2.8px;
         }
 
         .subtitle {
             color: var(--color-amber-800);
-            opacity: 0.7;
+            opacity: 0.5;
+            font-style: italic;
+            font-weight: 500;
+            font-size: 1.2rem;
         }
 
         .dots {
@@ -167,7 +177,7 @@
             margin-bottom: 0.5rem;
         }
 
-        .track-label.amber { color: var(--color-amber-700); }
+        .track-label.amber { color: var(--color-amber-400); }
         .track-label.rose { color: var(--color-rose-700); }
 
         .artist-name {
@@ -193,12 +203,12 @@
 
         .quote-box.amber {
             border-color: var(--color-amber-400);
-            background-color: rgba(254, 243, 199, 0.3);
+            background-color: rgba(255, 192, 175, 0.168);
         }
 
         .quote-box.rose {
             border-color: var(--color-rose-400);
-            background-color: rgba(255, 228, 230, 0.3);
+            background-color: rgba(209, 246, 202, 0.3);
         }
 
         .quote-line {
@@ -220,7 +230,7 @@
         }
 
         .timestamp.amber { border-color: #fde68a; }
-        .timestamp.rose { border-color: #fecdd3; }
+        .timestamp.rose { border-color: #d8f4c2; }
 
         .timestamp-text {
             font-size: 0.75rem;
