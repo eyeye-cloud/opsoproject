@@ -1,18 +1,18 @@
 :root {
             --color-cream: #ffffff;
-            --color-amber-900: #ead5d5;
-            --color-amber-800: #92400e;
-            --color-amber-700: #a16207;
-            --color-amber-600: #b45309;
+            --color-amber-900: #070707;
+            --color-amber-800: #eb9393;
+            --color-amber-700: #f4cd95;
+            --color-amber-600: #b0d68c;
             --color-amber-400: #d4a574;
             --color-amber-100: #fef3c7;
             --color-amber-50: #fffbeb;
-            --color-rose-950: #7c1d12;
-            --color-rose-900: #9f1239;
-            --color-rose-700: #be185d;
-            --color-rose-400: #fb7185;
-            --color-rose-100: #ffe4e6;
-            --color-rose-50: #fff7ed;
+            --color-rose-950: #32490b;
+            --color-rose-900: #070707;
+            --color-rose-700: #5cbe57;
+            --color-rose-400: #a0d578;
+            --color-rose-100: #dbffc2;
+            --color-rose-50: #e2f4c5;
         }
 
         * {
@@ -20,12 +20,17 @@
             padding: 0;
             box-sizing: border-box;
         }
+        
+        .italiana-regular {
+        font-family: 'Italiana', sans-serif;
+        font-style: normal;
+        }
 
         body {
             font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
             line-height: 1.6;
             padding: 3rem 1rem;
-            background-color: #000000;
+            background-color: #ffffff;
         }
 
         .container {
@@ -59,15 +64,20 @@
         }
 
         h1 {
-            font-size: 3rem;
-            font-weight: 700;
-            color: var(--color-amber-900);
-            margin-bottom: 0.75rem;
+            font-size: 3.5rem;
+            font-weight: 800;
+            color: #0c0c0c;
+            margin-bottom: 0.2rem;
+            font-family: 'Italiana', sans-serif;
+            letter-spacing: 2.8px;
         }
 
         .subtitle {
             color: var(--color-amber-800);
-            opacity: 0.7;
+            opacity: 0.5;
+            font-style: italic;
+            font-weight: 500;
+            font-size: 1.2rem;
         }
 
         .dots {
@@ -131,7 +141,6 @@
 
         .film-image {
             position: relative;
-            aspect-ratio: 1;
             background-color: #f3f4f6;
         }
 
@@ -147,17 +156,6 @@
             inset: 0;
             background: linear-gradient(to bottom right, rgba(254, 243, 199, 0.2), rgba(255, 228, 230, 0.2));
             mix-blend-mode: overlay;
-        }
-
-        .frame-number {
-            position: absolute;
-            top: 1rem;
-            right: 1rem;
-            background-color: rgba(0, 0, 0, 0.7);
-            color: white;
-            padding: 0.25rem 0.75rem;
-            font-size: 0.75rem;
-            letter-spacing: 0.1em;
         }
 
         .film-grid > div:nth-child(2) .frame-number {
@@ -179,7 +177,7 @@
             margin-bottom: 0.5rem;
         }
 
-        .track-label.amber { color: var(--color-amber-700); }
+        .track-label.amber { color: var(--color-amber-400); }
         .track-label.rose { color: var(--color-rose-700); }
 
         .artist-name {
@@ -192,8 +190,8 @@
             margin-bottom: 1.5rem;
         }
 
-        .song-title.amber { color: var(--color-amber-950); }
-        .song-title.rose { color: var(--color-rose-950); }
+        .song-title.amber { color: var(--color-amber-900); }
+        .song-title.rose { color: var(--color-rose-900); }
 
         .quote-box {
             border-left: 4px solid;
@@ -205,12 +203,12 @@
 
         .quote-box.amber {
             border-color: var(--color-amber-400);
-            background-color: rgba(254, 243, 199, 0.3);
+            background-color: rgba(255, 192, 175, 0.168);
         }
 
         .quote-box.rose {
             border-color: var(--color-rose-400);
-            background-color: rgba(255, 228, 230, 0.3);
+            background-color: rgba(209, 246, 202, 0.3);
         }
 
         .quote-line {
@@ -225,13 +223,6 @@
             margin-top: 0.75rem;
         }
 
-        .description {
-            font-size: 0.875rem;
-            opacity: 0.7;
-            line-height: 1.625;
-            margin-bottom: 1.5rem;
-        }
-
         .timestamp {
             margin-top: 1.5rem;
             padding-top: 1rem;
@@ -239,7 +230,7 @@
         }
 
         .timestamp.amber { border-color: #fde68a; }
-        .timestamp.rose { border-color: #fecdd3; }
+        .timestamp.rose { border-color: #d8f4c2; }
 
         .timestamp-text {
             font-size: 0.75rem;
@@ -252,9 +243,6 @@
 
         .film-text.amber .artist-name { color: var(--color-amber-900); }
         .film-text.rose .artist-name { color: var(--color-rose-900); }
-
-        .film-text.amber .description { color: var(--color-amber-900); }
-        .film-text.rose .description { color: var(--color-rose-900); }
 
         .film-text.amber .timestamp-text { color: var(--color-amber-700); }
         .film-text.rose .timestamp-text { color: var(--color-rose-700); }
