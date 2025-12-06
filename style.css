@@ -250,6 +250,16 @@ body {
     width: 380.2px;  
     height: 680px;
     object-fit: cover;
+    transition: opacity 0.3s ease-in-out;
+    display: block;
+}
+
+.spring-image:hover img,
+.summer-image:hover img,
+.autumn-image:hover img,
+.winter-image:hover img {
+    opacity: 0.6;
+    cursor: pointer;
 }
 
 .italiana-regular {
