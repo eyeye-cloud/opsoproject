@@ -29,8 +29,7 @@ body {
     
     transform: skewX(30deg); 
 
-    background-color: #ffffff; 
-    border: 3px solid #000; 
+    background-color: rgba(255, 255, 255, 1.0);
 }
 
 .item-1 {
@@ -75,12 +74,13 @@ body {
 
 .top-title {
     position: absolute;
-    top: 0px;
+    top: 10px;
     left: 55;
     color: #ffffff;
     font-size: 90px;
+    font-family: 'Italiana', sans-serif;
+    font-weight: 400;
 }
-
 .top-image {
     position: absolute;
     top: 145px;
@@ -108,11 +108,13 @@ body {
 
 .middle-title {
     position: absolute;
-    top: 135px;
-    left: 300;
+    top: 145px;
+    left: 308;
     color: #ffffff;
     font-size: 57px;
     z-index: 10;
+    font-family: 'Italiana', sans-serif;
+    font-weight: 400;
 }
 
 .middle-text {
@@ -120,7 +122,7 @@ body {
     top: 460px;
     left: 310;
     color: #ffffff;
-    font-size: 22px;
+    font-size: 21px;
     z-index: 10;  
     font-style: italic;
     font-weight: 300;
@@ -136,6 +138,7 @@ body {
     position: absolute;
     top: 1000px;
     left: 0px;
+    opacity: 0.6;
     overflow: hidden;
     mask-image: 
         linear-gradient(to bottom, black 70%, transparent 100%);
@@ -148,13 +151,16 @@ body {
     top: 1707px;
     left: 105px;
     color: #ffffff;
-    font-size: 55px;
+    font-size: 60px;
+    font-family: 'Italiana', sans-serif;
+    font-weight: 550;
 }
 
 .summer-image {
     position: absolute;
     top: 1148px;
     left: 380.2px;
+    opacity: 0.6;
     overflow: hidden;
     mask-image:
         linear-gradient(to top, black 70%, transparent 100%);
@@ -165,15 +171,18 @@ body {
 .summer-title {
     position: absolute;
     top: 1030px;
-    left: 460px;
+    left: 470px;
     color: #ffffff;
-    font-size: 55px;
+    font-size: 60px;
+    font-family: 'Italiana', sans-serif;
+    font-weight: 550;
 }
 
 .autumn-image {
     position: absolute;
     top: 1000px;
     right: 380.2px;
+    opacity: 0.6;
     overflow: hidden;
     mask-image: 
         linear-gradient(to bottom, black 70%, transparent 100%);
@@ -184,15 +193,18 @@ body {
 .autumn-title {
     position: absolute;
     top: 1707px;
-    right: 460px;
+    right: 470px;
     color: #ffffff;
-    font-size: 55px;
+    font-size: 60px;
+    font-family: 'Italiana', sans-serif;
+    font-weight: 550;
 }
 
 .winter-image {
     position: absolute;
     top: 1148px;
     right: 0px;
+    opacity: 0.6;
     overflow: hidden;
     mask-image:
         linear-gradient(to top, black 70%, transparent 100%);
@@ -205,7 +217,9 @@ body {
     top: 1030px;
     right: 105px;
     color: #ffffff;
-    font-size: 55px;
+    font-size: 60px;
+    font-family: 'Italiana', sans-serif;
+    font-weight: 550;
 }
 
 .spring-image img,
@@ -215,4 +229,9 @@ body {
     width: 380.2px;  
     height: 680px;
     object-fit: cover;
+}
+
+.italiana-regular {
+  font-family: 'Italiana', sans-serif;
+  font-style: normal;
 }
