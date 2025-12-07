@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<div class="container">
+        <link rel="stylesheet" href="stylesautumn.css"> 
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Italiana&display=swap" rel="stylesheet">
+        <div class="header">
+            <div class="header-icons">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <circle cx="12" cy="12" r="10"></circle>
+                    <circle cx="12" cy="12" r="6"></circle>
+                    <circle cx="12" cy="1" r="1"></circle>
+                </svg>
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <rect x="3" y="5" width="18" height="14" rx="2"></rect>
+                    <path d="M7 15v4M12 15v4M17 15v4M5 8h14"></path>
+                </svg>
+            </div>
+            <h1>Autumn Films</h1>
+            <p class="subtitle">
+                # 가을빛 스며든 길, 오래 묻어둔 기억들이 다시 고개드는 때<br>
+            </p>
+            <div class="dots">
+                <div class="dot"></div>
+                <div class="dot"></div>
+                <div class="dot"></div>
+            </div>
+        </div>
+</head>
+<body>
+        <div>
+            <div class="film-strip">
+                <div class="film-perforations film-perforations-left" id="perf1left"></div>
+                <div class="film-perforations film-perforations-right" id="perf1right"></div>
+                
+                <div class="film-content">
+                    <div class="film-grid">
+                        <div class="film-image">
+                            <img src="썸네일%20아카이브/반짝2006.jpg" alt="반짝 빛나던 나의 2006년">
+                            <div class="film-overlay"></div>
+                        </div>
+                        
+                        <div class="film-text amber">
+                            <div>
+                                <p class="track-label amber">TRACK 01</p>
+                                <p class="artist-name">적재</p>
+                                <h2 class="song-title amber">반짝 빛나던 나의 2006년</h2>
+                            </div>
+
+                            <div class="quote-box amber">
+                                <p class="quote-line">지난날의 그 맑은 마음은</p>
+                                <p class="quote-line">지금도 별빛이 되어</p>
+                                <p class="quote-line">내 하늘 한쪽에서</p>
+                                <p class="quote-line">조용히 빛나고 있다</p>
+                            </div>
+
+                            <div class="timestamp amber">
+                                <p class="timestamp-text">DEVELOPED: 2024 • KODAK PORTRA 400</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="film-strip">
+                <div class="film-perforations film-perforations-left" id="perf2left"></div>
+                <div class="film-perforations film-perforations-right" id="perf2right"></div>
+                
+                <div class="film-content">
+                    <div class="film-grid" style="direction: rtl;">
+                        <div style="direction: ltr;">
+                            <div class="film-text rose">
+                                <div>
+                                    <p class="track-label rose">
+                                        <br>
+                                        <br>
+                                        <br>
+                                        TRACK 02</p>
+                                    <p class="artist-name">신인류</p>
+                                    <h2 class="song-title rose">날씨의 요정</h2>
+                                </div>
+
+                                <div class="quote-box rose">
+                                    <p class="quote-line">당신은 누구시기에</p>
+                                    <p class="quote-line">내 마음 깊이 오시나이까</p>
+                                    <p class="quote-line">부드러운 바람결처럼</p>
+                                    <p class="quote-line">자꾸만 가까이 오시나이까</p>
+                                </div>
+
+                                <div class="timestamp rose">
+                                    <p class="timestamp-text">DEVELOPED: 2024 • FUJIFILM SUPERIA 400</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="film-image" style="direction: ltr;">
+                            <img src="썸네일%20아카이브/날씨의 요정.jpg" alt="날씨의 요정">
+                            <div class="film-overlay"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer">
+            <div class="footer-content">
+                <p class="footer-text">MUSIC × POETRY COLLECTION</p>
+            </div>
+        </div>
+    </div>
+</body>
+
+<script>
+        function createPerforations() {
+            const containers = [
+                { left: 'perf1left', right: 'perf1right' },
+                { left: 'perf2left', right: 'perf2right' }
+            ];
+
+            containers.forEach(({ left, right }) => {
+                [left, right].forEach(id => {
+                    const container = document.getElementById(id);
+                    container.innerHTML = '';
+                    for (let i = 0; i < 8; i++) {
+                        const hole = document.createElement('div');
+                        hole.className = 'perforation-hole';
+                        container.appendChild(hole);
+                    }
+                });
+            });
+        }
+
+        document.addEventListener('DOMContentLoaded', function() {
+            createPerforations();
+        });
+</script>
