@@ -1,24 +1,32 @@
+html {
+    overflow-y: scroll; 
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+}
+
 body {
     margin: 0;
     padding: 0;
     background-color: #000000; 
-    overflow-x: hidden; 
 }
 
 .first-page-section {
-    width: 100vw;
     height: 100vh;
     position: relative; 
+    transition: transform 1.3s ease-out, opacity 0.5s ease-out;
+}
+
+.first-page-section.hide { 
+    transform: translateY(-50px);
+    opacity: 0;
 }
 
 .slate-container {
     position: absolute; 
     top: 0; 
     right: 0;
-    
     width: 1200px; 
     height: 150px; 
-    
     margin-right: -50px;
 }
 
@@ -26,11 +34,8 @@ body {
     position: absolute; 
     width: 120px;
     height: 80px;
-    
-    transform: skewX(30deg); 
-
-    background-color: #ffffff; 
-    border: 3px solid #000; 
+    transform: skewX(30deg);
+    background-color: rgba(255, 255, 255, 1.0);
 }
 
 .item-1 {
@@ -75,12 +80,13 @@ body {
 
 .top-title {
     position: absolute;
-    top: 0px;
+    top: 10px;
     left: 55;
     color: #ffffff;
     font-size: 90px;
+    font-family: 'Italiana', sans-serif;
+    font-weight: 400;
 }
-
 .top-image {
     position: absolute;
     top: 145px;
@@ -108,11 +114,13 @@ body {
 
 .middle-title {
     position: absolute;
-    top: 135px;
-    left: 300;
+    top: 145px;
+    left: 308;
     color: #ffffff;
     font-size: 57px;
     z-index: 10;
+    font-family: 'Italiana', sans-serif;
+    font-weight: 400;
 }
 
 .middle-text {
@@ -120,21 +128,40 @@ body {
     top: 460px;
     left: 310;
     color: #ffffff;
-    font-size: 22px;
+    font-size: 21px;
     z-index: 10;  
     font-style: italic;
     font-weight: 300;
 }
 
+.fade-in {
+    opacity: 0.9 !important;
+}
+
 .second-page-section {
     position: relative;
     padding-top: 100px;
-    min-height: 500px;
+    height: 88vh; 
+    min-height: 88vh;
+    opacity: 0;
+    transition: opacity 0.3s ease-out;
+}
+
+.second-page-section div[class='-image'], 
+.second-page-section div[class='-title'] {
+    opacity: 0 !important;
+    transition: opacity 0.4s ease-out;
+    transform: none !important;
+}
+
+.second-page-section .show-content {
+    opacity: 0.8;
+    transform: translateY(0);
 }
 
 .spring-image {
     position: absolute;
-    top: 1000px;
+    top: 0px;
     left: 0px;
     overflow: hidden;
     mask-image: 
@@ -145,15 +172,17 @@ body {
 
 .spring-title {
     position: absolute;
-    top: 1707px;
+    top: 707px;
     left: 105px;
     color: #ffffff;
-    font-size: 55px;
+    font-size: 60px;
+    font-family: 'Italiana', sans-serif;
+    font-weight: 550;
 }
 
 .summer-image {
     position: absolute;
-    top: 1148px;
+    top: 148px;
     left: 380.2px;
     overflow: hidden;
     mask-image:
@@ -164,15 +193,17 @@ body {
 
 .summer-title {
     position: absolute;
-    top: 1030px;
-    left: 460px;
+    top: 30px;
+    left: 470px;
     color: #ffffff;
-    font-size: 55px;
+    font-size: 60px;
+    font-family: 'Italiana', sans-serif;
+    font-weight: 550;
 }
 
 .autumn-image {
     position: absolute;
-    top: 1000px;
+    top: 0px;
     right: 380.2px;
     overflow: hidden;
     mask-image: 
@@ -183,15 +214,17 @@ body {
 
 .autumn-title {
     position: absolute;
-    top: 1707px;
-    right: 460px;
+    top: 707px;
+    right: 470px;
     color: #ffffff;
-    font-size: 55px;
+    font-size: 60px;
+    font-family: 'Italiana', sans-serif;
+    font-weight: 550;
 }
 
 .winter-image {
     position: absolute;
-    top: 1148px;
+    top: 148px;
     right: 0px;
     overflow: hidden;
     mask-image:
@@ -202,10 +235,12 @@ body {
 
 .winter-title {
     position: absolute;
-    top: 1030px;
+    top: 30px;
     right: 105px;
     color: #ffffff;
-    font-size: 55px;
+    font-size: 60px;
+    font-family: 'Italiana', sans-serif;
+    font-weight: 550;
 }
 
 .spring-image img,
@@ -215,4 +250,25 @@ body {
     width: 380.2px;  
     height: 680px;
     object-fit: cover;
+    transition: opacity 0.3s ease-in-out;
+    display: block;
+}
+
+.spring-image:hover img,
+.summer-image:hover img,
+.autumn-image:hover img,
+.winter-image:hover img {
+    opacity: 0.6;
+    cursor: pointer;
+}
+
+.italiana-regular {
+  font-family: 'Italiana', sans-serif;
+  font-style: normal;
+}
+
+.second-page-section a {
+    text-decoration: none; /* 밑줄 제거 */
+    color: inherit; /* 부모 요소의 색상 상속 */
+    display: block; /* 링크가 div를 완전히 감싸도록 설정 */
 }

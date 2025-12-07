@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<div class="container">
+        <link rel="stylesheet" href="stylesummer.css"> 
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Italiana&display=swap" rel="stylesheet">
+        <div class="header">
+            <div class="header-icons">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <circle cx="12" cy="12" r="10"></circle>
+                    <circle cx="12" cy="12" r="6"></circle>
+                    <circle cx="12" cy="1" r="1"></circle>
+                </svg>
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <rect x="3" y="5" width="18" height="14" rx="2"></rect>
+                    <path d="M7 15v4M12 15v4M17 15v4M5 8h14"></path>
+                </svg>
+            </div>
+            <h1>Summer Films</h1>
+            <p class="subtitle">
+                # 가장 빛나는 계절에, 서툰 청춘의 마음이 웃음으로 나란히 닿는 순간<br>
+            </p>
+            <div class="dots">
+                <div class="dot"></div>
+                <div class="dot"></div>
+                <div class="dot"></div>
+            </div>
+        </div>
+</head>
+<body>
+        <div>
+            <div class="film-strip">
+                <div class="film-perforations film-perforations-left" id="perf1left"></div>
+                <div class="film-perforations film-perforations-right" id="perf1right"></div>
+                
+                <div class="film-content">
+                    <div class="film-grid">
+                        <div class="film-image">
+                            <img src="썸네일%20아카이브/what makes you beautiful.jpg" alt="what makes you beautiful">
+                            <div class="film-overlay"></div>
+                        </div>
+                        
+                        <div class="film-text amber">
+                            <div>
+                                <p class="track-label amber">TRACK 01</p>
+                                <p class="artist-name">One direction</p>
+                                <h2 class="song-title amber">What makes you beautiful</h2>
+                            </div>
+
+                            <div class="quote-box amber">
+                                <p class="quote-line">바다야</p>
+                                <p class="quote-line">푸른 바다야</p>
+                                <p class="quote-line">빛이 너울대는 여름에</p>
+                                <p class="quote-line">내 마음 먼저 달아난다.</p>
+                            </div>
+
+                            <div class="timestamp amber">
+                                <p class="timestamp-text">DEVELOPED: 2024 • KODAK PORTRA 400</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="film-strip">
+                <div class="film-perforations film-perforations-left" id="perf2left"></div>
+                <div class="film-perforations film-perforations-right" id="perf2right"></div>
+                
+                <div class="film-content">
+                    <div class="film-grid" style="direction: rtl;">
+                        <div style="direction: ltr;">
+                            <div class="film-text rose">
+                                <div>
+                                    <p class="track-label rose">
+                                        <br>
+                                        <br>
+                                        <br>
+                                        TRACK 02</p>
+                                    <p class="artist-name">산이, 레이나</p>
+                                    <h2 class="song-title rose">한여름밤의 꿀</h2>
+                                </div>
+
+                                <div class="quote-box rose">
+                                    <p class="quote-line">너의 웃음이 바람을 타고</p>
+                                    <p class="quote-line">내 마음 그늘에 스며들던 날,</p>
+                                    <p class="quote-line">별들은 괜히 더 반짝였고</p>
+                                    <p class="quote-line">나는 그저 그 순간이 좋았다.</p>
+                                </div>
+
+                                <div class="timestamp rose">
+                                    <p class="timestamp-text">DEVELOPED: 2024 • FUJIFILM SUPERIA 400</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="film-image" style="direction: ltr;">
+                            <img src="썸네일%20아카이브/한 여름밤의 꿀.jpg" alt="한 여름밤의 꿀">
+                            <div class="film-overlay"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer">
+            <div class="footer-content">
+                <p class="footer-text">MUSIC × POETRY COLLECTION</p>
+            </div>
+        </div>
+    </div>
+</body>
+
+<script>
+        function createPerforations() {
+            const containers = [
+                { left: 'perf1left', right: 'perf1right' },
+                { left: 'perf2left', right: 'perf2right' }
+            ];
+
+            containers.forEach(({ left, right }) => {
+                [left, right].forEach(id => {
+                    const container = document.getElementById(id);
+                    container.innerHTML = '';
+                    for (let i = 0; i < 8; i++) {
+                        const hole = document.createElement('div');
+                        hole.className = 'perforation-hole';
+                        container.appendChild(hole);
+                    }
+                });
+            });
+        }
+
+        document.addEventListener('DOMContentLoaded', function() {
+            createPerforations();
+        });
+</script>
