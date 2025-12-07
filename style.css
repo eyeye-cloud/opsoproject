@@ -22,78 +22,70 @@ body {
 }
 
 .slate-container {
-    position: absolute; 
+    position: relative; 
     top: 0; 
     right: 0;
-    width: 1200px; 
-    height: 150px; 
-    margin-right: -50px;
+    width: 80%; 
+    height: 10%; 
 }
 
 .diamond-wrapper {
     position: absolute; 
-    width: 120px;
-    height: 80px;
+    width: 14.5vh;
+    height: 9.7vh;
     transform: skewX(30deg);
-    background-color: rgba(255, 255, 255, 1.0);
+    background-color: rgb(244, 244, 244);
+    top: 30%;
 }
 
 .item-1 {
-    top: 25px;
-    left: 0px; 
+    left: 31%; 
 }
 
 .item-2 {
-    top: 25px;
-    left: 150px;
+    left: 43.5%;
 }
 
 .item-3 {
-    top: 25px;
-    left: 300px;
+    left: 56%;
 }
 
 .item-4 {
-    top: 25px;
-    left: 450px;
+    left: 68.5%;
 }
 
 .item-5 {
-    top: 25px;
-    left: 600px;
+    left: 81%;
 }
 
 .item-6 {
-    top: 25px;
-    left: 750px;
+    left: 93.5%;
 }
 
 .item-7 {
-    top: 25px;
-    left: 900px;
+    left: 106%;
 }
 
 .item-8 {
-    top: 25px;
-    left: 1050px;
+    left: 118.5%;
 }
 
 .top-title {
     position: absolute;
-    top: 10px;
-    left: 55;
+    top: 1.2%;
+    left: 3.6%;
     color: #ffffff;
-    font-size: 90px;
+    font-size: 10.96vh;
     font-family: 'Italiana', sans-serif;
     font-weight: 400;
 }
 .top-image {
     position: absolute;
-    top: 145px;
-    left: 75;
+    top: 17.5%;
+    left: 4.95%;
 
-    width: 1000px; 
-    height: 990px;
+    width: 121.05vh; 
+    height: 120vh;
 }
 
 .top-image img {
@@ -103,21 +95,21 @@ body {
 
 .middle-box {
     position: absolute; 
-    width: 260px;
-    height: 680px;
+    width: 31.5vh; 
+    height: 120vh;
 
     background-color: #000000; 
-    top: 145px;
-    left: 290px;
+    top: 17.5%;
+    left: 19.1%;
     z-index: 5;
 }
 
 .middle-title {
     position: absolute;
-    top: 145px;
-    left: 308;
+    top: 17.5%;
+    left: 20.25%;
     color: #ffffff;
-    font-size: 57px;
+    font-size: 6.9vh;
     z-index: 10;
     font-family: 'Italiana', sans-serif;
     font-weight: 400;
@@ -125,10 +117,10 @@ body {
 
 .middle-text {
     position: absolute;
-    top: 460px;
-    left: 310;
+    top: 55.7%;
+    left: 20.4%;
     color: #ffffff;
-    font-size: 21px;
+    font-size: 2.54vh;
     z-index: 10;  
     font-style: italic;
     font-weight: 300;
@@ -141,10 +133,10 @@ body {
 .second-page-section {
     position: relative;
     padding-top: 100px;
-    height: 88vh; 
-    min-height: 88vh;
+    height: 82vh; 
+    min-height: 82vh;
     opacity: 0;
-    transition: opacity 0.3s ease-out;
+    transition: opacity 0.7s ease-out;
 }
 
 .second-page-section div[class='-image'], 
@@ -162,7 +154,9 @@ body {
 .spring-image {
     position: absolute;
     top: 0px;
-    left: 0px;
+    left: 0%;
+    width: 25%;
+    height: 82vh;
     overflow: hidden;
     mask-image: 
         linear-gradient(to bottom, black 70%, transparent 100%);
@@ -172,10 +166,10 @@ body {
 
 .spring-title {
     position: absolute;
-    top: 707px;
-    left: 105px;
+    bottom: 0px;
+    left: 7%;
     color: #ffffff;
-    font-size: 60px;
+    font-size: 7.3vh;
     font-family: 'Italiana', sans-serif;
     font-weight: 550;
 }
@@ -183,7 +177,9 @@ body {
 .summer-image {
     position: absolute;
     top: 148px;
-    left: 380.2px;
+    left: 25%;
+    width: 25%;
+    height: 82vh;
     overflow: hidden;
     mask-image:
         linear-gradient(to top, black 70%, transparent 100%);
@@ -194,9 +190,9 @@ body {
 .summer-title {
     position: absolute;
     top: 30px;
-    left: 470px;
+    left: 31%;
     color: #ffffff;
-    font-size: 60px;
+    font-size: 7.3vh;
     font-family: 'Italiana', sans-serif;
     font-weight: 550;
 }
@@ -204,7 +200,9 @@ body {
 .autumn-image {
     position: absolute;
     top: 0px;
-    right: 380.2px;
+    left: 50%;
+    width: 25%;
+    height: 82vh;
     overflow: hidden;
     mask-image: 
         linear-gradient(to bottom, black 70%, transparent 100%);
@@ -214,10 +212,10 @@ body {
 
 .autumn-title {
     position: absolute;
-    top: 707px;
-    right: 470px;
+    bottom: 0;
+    left: 56%;
     color: #ffffff;
-    font-size: 60px;
+    font-size: 7.3vh;
     font-family: 'Italiana', sans-serif;
     font-weight: 550;
 }
@@ -225,7 +223,9 @@ body {
 .winter-image {
     position: absolute;
     top: 148px;
-    right: 0px;
+    left: 75%;
+    width: 25%;
+    height: 82vh;
     overflow: hidden;
     mask-image:
         linear-gradient(to top, black 70%, transparent 100%);
@@ -236,9 +236,9 @@ body {
 .winter-title {
     position: absolute;
     top: 30px;
-    right: 105px;
+    left: 82.3%;
     color: #ffffff;
-    font-size: 60px;
+    font-size: 7.3vh;
     font-family: 'Italiana', sans-serif;
     font-weight: 550;
 }
@@ -247,8 +247,8 @@ body {
 .summer-image img,
 .autumn-image img,
 .winter-image img {
-    width: 380.2px;  
-    height: 680px;
+    width: 100%;  
+    height: 100%;
     object-fit: cover;
     transition: opacity 0.3s ease-in-out;
     display: block;
