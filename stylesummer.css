@@ -30,37 +30,27 @@
             font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
             line-height: 1.6;
             padding: 3rem 1rem;
-            background-color: #ffffff;
+            height: 100%;
+            background-color: #fcfcfc;
+            overflow: hidden;
+            overflow-x: hidden;
+            opacity: 0; 
+            transition: opacity 0.9s ease-in-out; 
+        }
+
+        body.loaded {
+            opacity: 1; 
         }
 
         .container {
-            max-width: 72rem;
+            max-width: 67rem;
             margin: 0 auto;
+            overflow: hidden;
         }
 
         .header {
             text-align: left;
-            margin-bottom: 4rem;
-        }
-
-        .header-icons {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            gap: 0.75rem;
-            margin-bottom: 1.5rem;
-        }
-
-        .header-icons svg {
-            width: 2.5rem;
-            height: 2.5rem;
-            stroke: var(--color-amber-800);
-        }
-
-        .header-icons svg:nth-child(2) {
-            width: 2rem;
-            height: 2rem;
-            stroke: var(--color-amber-700);
+            margin-bottom: 2.8rem;
         }
 
         h1 {
@@ -68,70 +58,117 @@
             font-weight: 800;
             color: #0c0c0c;
             margin-bottom: 0.2rem;
+            margin-top: 2rem;
             font-family: 'Italiana', sans-serif;
             letter-spacing: 2.8px;
         }
 
         .subtitle {
-            color: #38627d;
+            color: var(--color-amber-800);
             opacity: 0.5;
             font-style: italic;
             font-weight: 500;
             font-size: 1.2rem;
         }
 
-        .dots {
+        .button {
+            position: relative; 
+            width: 100%;
+            left: 90%;
+            float: right;
+            height: 30%;
+        }
+
+        .prev-btn {
+            position: absolute; 
+            font-size: 24px;
+            border: none;
+            background-color: transparent;
+            cursor: pointer;
+            padding: 0;
+            outline: none;
+            color: #0c0c0c; 
+            left: 1%; 
+            top: 0;
+        }
+
+        .next-btn {
+            position: absolute; 
+            font-size: 24px;
+            border: none;
+            background-color: transparent;
+            cursor: pointer;
+            padding: 0;
+            outline: none;
+            color: #0c0c0c; 
+            left: 4.5%; 
+            top: 0;
+        }
+
+        .movie-line1 {
+            position: absolute; 
+            width: 5%; 
+            height: 100%;
+            background-color: #000000; 
+            left: 0%;
+            top: 0%;
+        }
+
+        .movie-line2 {
+            position: absolute; 
+            width: 5%;
+            height: 100%;
+            background-color: #000000; 
+            right: 0%;
+            top: 0%;
+        }
+
+        .perforation-container {
+            position: absolute;
+            width: 5%; 
+            height: 100%;
+            top: 0;
+            background-color: #000000;
+            
             display: flex;
+            flex-direction: column;
+            justify-content: space-evenly;
             align-items: center;
-            justify-content: center;
-            gap: 0.5rem;
-            margin-top: 1rem;
+            z-index: 5; 
         }
 
-        .dot {
-            width: 0.75rem;
-            height: 0.75rem;
-            border-radius: 50%;
+        .perforation-container.left {
+            left: 0%;
+        }
+        .perforation-container.right {
+            right: 0%;
         }
 
-        .dot:nth-child(1) { background-color: var(--color-amber-800); }
-        .dot:nth-child(2) { background-color: var(--color-amber-700); }
-        .dot:nth-child(3) { background-color: var(--color-amber-600); }
+        .perforation-hole {
+            width: 40px; 
+            height: 52px; 
+            background-color: rgb(246, 246, 246); 
+            border-radius: 0.125rem;
+        }
+
+        .track-container {
+            width: 200%; 
+            display: flex; 
+            transition: transform 0.5s ease-in-out; 
+        }
 
         .film-strip {
-            margin-bottom: 3rem;
+            min-width: 50%;
+            margin-bottom: 0; 
             position: relative;
         }
 
-        .film-perforations {
-            position: absolute;
-            top: 0;
-            bottom: 0;
-            width: 2rem;
-            background-color: var(--color-amber-900);
-            display: flex;
-            flex-direction: column;
-            justify-content: space-around;
-            padding: 1rem 0;
-            gap: 0.5rem;
-        }
-
-        .film-perforations-left { left: 0; }
-        .film-perforations-right { right: 0; }
-
-        .perforation-hole {
-            width: 1rem;
-            height: 1rem;
-            background-color: var(--color-cream);
-            border-radius: 0.125rem;
-            margin: 0 auto;
-        }
-
         .film-content {
-            margin-left: 2rem;
-            margin-right: 2rem;
+            margin-left: 1rem;
+            margin-right: 1rem;
+            margin-bottom: 1rem;
             background-color: white;
-            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+            box-shadow: 0 3px 26px -8px rgba(0, 0, 0, 0.329);
         }
 
         .film-grid {
@@ -156,11 +193,6 @@
             inset: 0;
             background: linear-gradient(to bottom right, rgba(254, 243, 199, 0.2), rgba(255, 228, 230, 0.2));
             mix-blend-mode: overlay;
-        }
-
-        .film-grid > div:nth-child(2) .frame-number {
-            left: 1rem;
-            right: auto;
         }
 
         .film-text {
@@ -247,24 +279,6 @@
         .film-text.amber .timestamp-text { color: #88a9af; }
         .film-text.rose .timestamp-text { color: var(--color-rose-700); }
 
-        .footer {
-            margin-top: 4rem;
-            text-align: center;
-        }
-
-        .footer-content {
-            display: inline-block;
-            border-top: 2px solid rgba(120, 53, 15, 0.3);
-            border-bottom: 2px solid rgba(120, 53, 15, 0.3);
-            padding: 0.75rem 2rem;
-        }
-
-        .footer-text {
-            font-size: 0.875rem;
-            color: var(--color-amber-800);
-            opacity: 0.6;
-            letter-spacing: 0.1em;
-        }
 
         @media (max-width: 768px) {
             .film-grid {

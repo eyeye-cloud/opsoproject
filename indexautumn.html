@@ -6,35 +6,24 @@
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Italiana&display=swap" rel="stylesheet">
-        <div class="header">
-            <div class="header-icons">
-                <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                    <circle cx="12" cy="12" r="10"></circle>
-                    <circle cx="12" cy="12" r="6"></circle>
-                    <circle cx="12" cy="1" r="1"></circle>
-                </svg>
-                <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                    <rect x="3" y="5" width="18" height="14" rx="2"></rect>
-                    <path d="M7 15v4M12 15v4M17 15v4M5 8h14"></path>
-                </svg>
-            </div>
+        <div class="header">           
             <h1>Autumn Films</h1>
             <p class="subtitle">
                 # 가을빛 스며든 길, 오래 묻어둔 기억들이 다시 고개드는 때<br>
             </p>
-            <div class="dots">
-                <div class="dot"></div>
-                <div class="dot"></div>
-                <div class="dot"></div>
-            </div>
+            <div class="movie-line1"></div>
+            <div class="movie-line2"></div>
+            <div class="perforation-container left" id="perf-left"></div>
+            <div class="perforation-container right" id="perf-right"></div>
+            <div class="button">
+                <button id="prev-btn" class="prev-btn">«</button>
+                <button id="next-btn" class="next-btn">»</button>
+            </div> 
         </div>
 </head>
 <body>
-        <div>
-            <div class="film-strip">
-                <div class="film-perforations film-perforations-left" id="perf1left"></div>
-                <div class="film-perforations film-perforations-right" id="perf1right"></div>
-                
+        <div class="track-container" id="track-container">
+            <div class="film-strip" id="track-amber">
                 <div class="film-content">
                     <div class="film-grid">
                         <div class="film-image">
@@ -64,7 +53,7 @@
                 </div>
             </div>
 
-            <div class="film-strip">
+            <div class="film-strip" id="track-rose">
                 <div class="film-perforations film-perforations-left" id="perf2left"></div>
                 <div class="film-perforations film-perforations-right" id="perf2right"></div>
                 
@@ -96,17 +85,11 @@
                         </div>
 
                         <div class="film-image" style="direction: ltr;">
-                            <img src="썸네일%20아카이브/날씨의 요정.jpg" alt="날씨의 요정">
+                            <img src="썸네일%20아카이브/Give love.jpg" alt="Give love">
                             <div class="film-overlay"></div>
                         </div>
                     </div>
                 </div>
-            </div>
-        </div>
-
-        <div class="footer">
-            <div class="footer-content">
-                <p class="footer-text">MUSIC × POETRY COLLECTION</p>
             </div>
         </div>
     </div>
@@ -115,8 +98,7 @@
 <script>
         function createPerforations() {
             const containers = [
-                { left: 'perf1left', right: 'perf1right' },
-                { left: 'perf2left', right: 'perf2right' }
+                { left: 'perf-left', right: 'perf-right' }
             ];
 
             containers.forEach(({ left, right }) => {
@@ -131,8 +113,44 @@
                 });
             });
         }
+</script>
 
-        document.addEventListener('DOMContentLoaded', function() {
-            createPerforations();
-        });
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    createPerforations(); 
+
+    const trackContainer = document.getElementById('track-container'); 
+    const prevBtn = document.getElementById('prev-btn');
+    const nextBtn = document.getElementById('next-btn');
+
+    let currentTrack = 1; 
+    const totalTracks = 2; 
+
+    function updateTrackDisplay() {
+        const offset = (currentTrack - 1) * -50; 
+        trackContainer.style.transform = `translateX(${offset}%)`;
+
+        prevBtn.disabled = (currentTrack === 1);
+        nextBtn.disabled = (currentTrack === totalTracks);
+    }
+
+    nextBtn.addEventListener('click', function() {
+        if (currentTrack < totalTracks) {
+            currentTrack++;
+            updateTrackDisplay();
+        }
+    });
+
+    prevBtn.addEventListener('click', function() {
+        if (currentTrack > 1) {
+            currentTrack--;
+            updateTrackDisplay();
+        }
+    });
+
+    updateTrackDisplay();
+    setTimeout(() => {
+        document.body.classList.add('loaded');
+    }, 10);
+});
 </script>
