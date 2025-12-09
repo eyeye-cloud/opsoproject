@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<div class="container">
+        <link rel="stylesheet" href="../css/stylesautumn.css"> 
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Italiana&display=swap" rel="stylesheet">
+        <div class="header">           
+            <h1>Autumn Films</h1>
+            <p class="subtitle">
+                # 가을빛 스며든 길, 오래 묻어둔 기억들이 다시 고개드는 때<br>
+            </p>
+            <div class="movie-line1"></div>
+            <div class="movie-line2"></div>
+            <div class="perforation-container left" id="perf-left"></div>
+            <div class="perforation-container right" id="perf-right"></div>
+            <div class="button">
+                <button id="prev-btn" class="prev-btn">«</button>
+                <button id="next-btn" class="next-btn">»</button>
+            </div> 
+        </div>
+</head>
+<body>
+        <div class="track-container" id="track-container">
+            <div class="film-strip" id="track-amber">
+                <div class="film-content">
+                    <div class="film-grid">
+                        <div class="film-image">
+                            <img src="../asset/썸네일%20아카이브/반짝2006.jpg" alt="반짝 빛나던 나의 2006년">
+                            <div class="film-overlay"></div>
+                        </div>
+                        
+                        <div class="film-text amber">
+                            <div>
+                                <p class="track-label amber">TRACK 01</p>
+                                <p class="artist-name">적재</p>
+                                <h2 class="song-title amber">반짝 빛나던 나의 2006년</h2>
+                            </div>
+
+                            <div class="quote-box amber">
+                                <p class="quote-line">지난날의 그 맑은 마음은</p>
+                                <p class="quote-line">지금도 별빛이 되어</p>
+                                <p class="quote-line">내 하늘 한쪽에서</p>
+                                <p class="quote-line">조용히 빛나고 있다</p>
+                            </div>
+
+                            <div class="timestamp amber">
+                                <p class="timestamp-text">DEVELOPED: 2024 • KODAK PORTRA 400</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="film-strip" id="track-rose">
+                <div class="film-perforations film-perforations-left" id="perf2left"></div>
+                <div class="film-perforations film-perforations-right" id="perf2right"></div>
+                
+                <div class="film-content">
+                    <div class="film-grid" style="direction: rtl;">
+                        <div style="direction: ltr;">
+                            <div class="film-text rose">
+                                <div>
+                                    <p class="track-label rose">
+                                        <br>
+                                        <br>
+                                        <br>
+                                        TRACK 02</p>
+                                    <p class="artist-name">신인류</p>
+                                    <h2 class="song-title rose">날씨의 요정</h2>
+                                </div>
+
+                                <div class="quote-box rose">
+                                    <p class="quote-line">당신은 누구시기에</p>
+                                    <p class="quote-line">내 마음 깊이 오시나이까</p>
+                                    <p class="quote-line">부드러운 바람결처럼</p>
+                                    <p class="quote-line">자꾸만 가까이 오시나이까</p>
+                                </div>
+
+                                <div class="timestamp rose">
+                                    <p class="timestamp-text">DEVELOPED: 2024 • FUJIFILM SUPERIA 400</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="film-image" style="direction: ltr;">
+                            <img src="../asset/썸네일%20아카이브/Give love.jpg" alt="Give love">
+                            <div class="film-overlay"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+<script>
+        function createPerforations() {
+            const containers = [
+                { left: 'perf-left', right: 'perf-right' }
+            ];
+
+            containers.forEach(({ left, right }) => {
+                [left, right].forEach(id => {
+                    const container = document.getElementById(id);
+                    container.innerHTML = '';
+                    for (let i = 0; i < 8; i++) {
+                        const hole = document.createElement('div');
+                        hole.className = 'perforation-hole';
+                        container.appendChild(hole);
+                    }
+                });
+            });
+        }
+</script>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    createPerforations(); 
+
+    const trackContainer = document.getElementById('track-container'); 
+    const prevBtn = document.getElementById('prev-btn');
+    const nextBtn = document.getElementById('next-btn');
+
+    let currentTrack = 1; 
+    const totalTracks = 2; 
+
+    function updateTrackDisplay() {
+        const offset = (currentTrack - 1) * -50; 
+        trackContainer.style.transform = `translateX(${offset}%)`;
+
+        prevBtn.disabled = (currentTrack === 1);
+        nextBtn.disabled = (currentTrack === totalTracks);
+    }
+
+    nextBtn.addEventListener('click', function() {
+        if (currentTrack < totalTracks) {
+            currentTrack++;
+            updateTrackDisplay();
+        }
+    });
+
+    prevBtn.addEventListener('click', function() {
+        if (currentTrack > 1) {
+            currentTrack--;
+            updateTrackDisplay();
+        }
+    });
+
+    updateTrackDisplay();
+    setTimeout(() => {
+        document.body.classList.add('loaded');
+    }, 10);
+});
+</script>
