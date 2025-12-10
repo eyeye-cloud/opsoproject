@@ -13,8 +13,6 @@
  
 전체화면(F11)으로 감상하는 것을 권장드립니다
 
-
-
 >Open source project team for Hanyang University
 >
 > [https://www.hanyang.ac.kr/web/www/erica-campus1]
@@ -23,22 +21,22 @@
 김예인
 * @eyeye-cloud
 * 한양대학교 바이오신약융합학부
-* 전체 프로젝트 관리, README 작성, 초기 구조 설계
+* 팀장, 전체 프로젝트 관리, README 작성, 초기 구조 설계
 
 김서진
 * @sjin0507
 * 한양대학교 바이오신약융합학부
-* HTML/CSS 기본 구현, 계절별 페이지 마크업, 이미지 폴더 관리, 썸네일 작업
+* HTML/CSS 기본 구현, 계절별 페이지 마크업, README 총괄, 썸네일 작업
 
 권용준
 * @alqpwoei-lgtm
 * 한양대학교 바이오신약융합학부
-* JavaScript 기능 구현, 인터랙션 개발, 화살표 UI 수정, 상세 페이지 디자인
+* JavaScript 기능 구현, README 작성, 화살표 UI 수정, 상세 페이지 디자인
 
 최선민
 * @bamvory
 * 한양대학교 바이오신약융합학부
-* CSS 디자인, 반응형 레이아웃, 폰트 적용
+* CSS 디자인, 반응형 레이아웃, 폰트 적용, README 작성
 ***
 #### 개발 기간
 
@@ -65,7 +63,6 @@
 
 <AI 이용>
 
-*코드 
 * AI 툴을 활용하여 메인 페이지에 사계절에 어울리는 명화를 생성하였습니다
 <br>프롬프트 예시)
 <br>겨울에 대한 이미지를 생성하고 싶어. 침엽수가 꼭 들어갔으면 좋겠어. 인상주의 화풍으로 그려. 사람과 건물 없이 그려. 세로 이미지로 생성
@@ -78,7 +75,11 @@
 
 #### Git Ignore 기능 이용
 
-
+* IDE 및 OS 관련 파일
+* Node.js 패키지 (TailwindCSS)
+* 외부 라이브러리/프레임워크 관련 파일
+* 캐시 또는 빌드 결과 폴더
+* 로그 및 임시 파일
 
 #### Issues 기능 이용
 
@@ -86,7 +87,7 @@
 
 #### Commit timeline
 
--<img src="https://github.com/user-attachments/assets/23f5cbec-9eda-4bfa-9da9-657d33dae4ef" width="500" height="1000"/>
+<img width="339" height="957" alt="Image" src="https://github.com/user-attachments/assets/ed0b672c-8e73-4e08-a9ea-17de992557c4" />
 
 #### 작업 장면
 
