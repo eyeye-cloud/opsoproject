@@ -53,21 +53,32 @@
         }
 
         h1 {
-            font-size: 3.5rem;
+            font-size: 3.4rem;
             font-weight: 800;
             color: #0c0c0c;
             margin-bottom: 0.2rem;
             margin-top: 2rem;
             font-family: 'Italiana', sans-serif;
             letter-spacing: 2.8px;
+            margin-left: 1rem;
         }
 
         .subtitle {
-            color: var(--color-amber-800);
+            color: #6b6f92;
             opacity: 0.5;
             font-style: italic;
             font-weight: 500;
             font-size: 1.2rem;
+            margin-left: 1rem;
+            transition: color .4s ease;
+        }
+
+        .subtitle.red-theme {
+            color: #6b6f92;
+        }
+
+        .subtitle.green-theme {
+            color: #6f6f6f;
         }
 
         .button {
@@ -80,7 +91,7 @@
 
         .prev-btn {
             position: absolute; 
-            font-size: 24px;
+            font-size: 30px;
             border: none;
             background-color: transparent;
             cursor: pointer;
@@ -89,11 +100,13 @@
             color: #0c0c0c; 
             left: 1%; 
             top: 0;
+            opacity: 1;
+            transition: 0.3s; 
         }
 
         .next-btn {
             position: absolute; 
-            font-size: 24px;
+            font-size: 30px;
             border: none;
             background-color: transparent;
             cursor: pointer;
@@ -102,6 +115,15 @@
             color: #0c0c0c; 
             left: 4.5%; 
             top: 0;
+            opacity: 1;
+            transition: 0.3s; 
+        }
+
+        .prev-btn:disabled,
+        .next-btn:disabled {
+            color: #797979;
+            opacity: 0.7;
+            cursor: default;
         }
 
         .movie-line1 {
@@ -192,6 +214,7 @@
             inset: 0;
             background: linear-gradient(to bottom right, rgba(254, 243, 199, 0.2), rgba(255, 228, 230, 0.2));
             mix-blend-mode: overlay;
+            pointer-events: none;
         }
 
         .film-text {
@@ -199,7 +222,7 @@
             background-color: white;
             display: flex;
             flex-direction: column;
-            justify-content: center;
+            margin-top: 25px;
         }
 
         .track-label {
@@ -248,36 +271,62 @@
             opacity: 0.9;
         }
 
-        .quote-source {
-            font-size: 0.875rem;
-            opacity: 0.7;
-            margin-top: 0.75rem;
-        }
-
-        .timestamp {
-            margin-top: 1.5rem;
-            padding-top: 1rem;
-            border-top: 1px solid;
-        }
-
-        .timestamp.amber { border-color: #95a0c1; }
-        .timestamp.rose { border-color: #a2a2a2; }
-
-        .timestamp-text {
-            font-size: 0.75rem;
-            letter-spacing: 0.1em;
-            opacity: 0.5;
-        }
-
         .quote-box.amber .quote-line { color: var(--color-amber-900); }
         .quote-box.rose .quote-line { color: var(--color-rose-900); }
 
         .film-text.amber .artist-name { color: var(--color-amber-900); }
         .film-text.rose .artist-name { color: var(--color-rose-900); }
 
-        .film-text.amber .timestamp-text { color: var(--color-amber-700); }
-        .film-text.rose .timestamp-text { color: var(--color-rose-700); }
+        .quote-desc {
+            margin-bottom: 0.25rem;
+            margin-left: 0.17rem;
+            font-size: 0.96rem;
+            font-style: italic;
+            opacity: 0.8;
+        }
 
+        #youtube-hidden-container {
+            position: absolute;
+            top: -9999px;
+            left: -9999px;
+            width: 1px;
+            height: 1px;
+            overflow: hidden;
+            z-index: -1; 
+        }
+
+        .timeline {
+            appearance: none;
+            width: 100%;
+            height: 4px;
+            background: #d1d5db;
+            border-radius: 10px;
+            outline: none;
+            position: relative;
+        }
+
+        .timeline::-webkit-slider-runnable-track {
+            height: 4px;
+            border-radius: 10px;
+            background: linear-gradient(to right, var(--theme-color) var(--progress, 0%), #d1d5db var(--progress, 0%));
+            transition: background 0.03s linear;
+        }
+
+        .timeline::-webkit-slider-thumb {
+            appearance: none;
+            width: 14px;
+            height: 14px;
+            background: white;
+            border: 3px solid var(--theme-color);
+            border-radius: 50%;
+            cursor: pointer;
+            margin-top: -5px; 
+            transition: transform 0.1s linear;
+        }
+
+        .timeline:hover::-webkit-slider-thumb {
+            transform:scale(1.12);
+        }
 
         @media (max-width: 768px) {
             .film-grid {
@@ -305,4 +354,4 @@
             .film-grid > div:nth-child(2) .frame-number {
                 left: 1rem;
             }
-        }
+        }        

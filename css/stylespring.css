@@ -65,7 +65,7 @@
         }
 
         .subtitle {
-            color: var("red-theme");
+            color: #de707e;
             opacity: 0.5;
             font-style: italic;
             font-weight: 500;

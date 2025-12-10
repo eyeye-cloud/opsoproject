@@ -113,17 +113,42 @@ body {
     z-index: 10;
     font-family: 'Italiana', sans-serif;
     font-weight: 400;
+    opacity: 0;
+    transform: translateY(30px);
+    animation-fill-mode: forwards;
 }
 
 .middle-text {
     position: absolute;
-    top: 55.7%;
-    left: 20.4%;
+    top: 51.7%;
+    left: 20.22%;
     color: #ffffff;
-    font-size: 2.54vh;
+    font-size: 2.27vh;
     z-index: 10;  
     font-style: italic;
     font-weight: 300;
+    opacity: 0;
+    transform: translateY(30px);
+    animation-fill-mode: forwards;
+}
+
+@keyframes fadeUp {
+    0% {
+        opacity: 0;
+        transform: translateY(5px);
+    }
+    100% {
+        opacity: 0.9; 
+        transform: translateY(0);
+    }
+}
+
+.middle-title {
+    animation: fadeUp 1s ease-out 0.12s forwards; 
+}
+
+.middle-text {
+    animation: fadeUp 1s ease-out 0.45s forwards; 
 }
 
 .fade-in {

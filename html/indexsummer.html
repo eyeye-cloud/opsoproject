@@ -1,11 +1,15 @@
 <!DOCTYPE html>
 <html lang="ko">
 <head>
-<div class="container">
+    <div class="container">
         <link rel="stylesheet" href="../css/stylesummer.css"> 
+        <script src="https://cdn.tailwindcss.com"></script>
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Italiana&display=swap" rel="stylesheet">
+        <title>Summer Films</title>
+</head>
+<body>
         <div class="header">           
             <h1>Summer Films</h1>
             <p class="subtitle">
@@ -20,37 +24,55 @@
                 <button id="next-btn" class="next-btn">»</button>
             </div> 
         </div>
-</head>
-<body>
         <div class="track-container" id="track-container">
             <div class="film-strip" id="track-amber">
                 <div class="film-content">
                     <div class="film-grid">
                         <div class="film-image">
-                            <img src="../asset/썸네일%20아카이브/what makes you beautiful.jpg" alt="what makes you beautiful">
+                            <img src="../asset/썸네일%20아카이브/let it be summer.jpg" alt="let it be summer">
                             <div class="film-overlay"></div>
                         </div>
                         
                         <div class="film-text amber">
                             <div>
                                 <p class="track-label amber">TRACK 01</p>
-                                <p class="artist-name">One direction</p>
-                                <h2 class="song-title amber">What makes you beautiful</h2>
+                                <p class="artist-name">Young K (DAY6)</p>
+                                <h2 class="song-title amber">let it be summer</h2>
                             </div>
 
                             <div class="quote-box amber">
-                                <p class="quote-line">바다야</p>
-                                <p class="quote-line">푸른 바다야</p>
-                                <p class="quote-line">빛이 너울대는 여름에</p>
-                                <p class="quote-line">내 마음 먼저 달아난다.</p>
+                                <p class="quote-line">“시간은 막지 못해</p>
+                                <p class="quote-line">계절이 바뀔 땐 아쉬움 하나 안 남게</p>
+                                <p class="quote-line">꽃 피는 봄을 지나 타오르는 시간 지금을 기억해”</p>
                             </div>
-
-                            <div class="timestamp amber">
-                                <p class="timestamp-text">DEVELOPED: 2024 • KODAK PORTRA 400</p>
+                            <div class="quote-desc">
+                                <p>듣는 순간, 청춘드라마 속 주인공이 된 듯한 노래</p>
                             </div>
                         </div>
                     </div>
                 </div>
+                <div class="absolute bottom-[16%] left-[56%] w-1/2 z-[100]" id="player-track-1" style="--theme-color:#84acd3">
+                    <div class="container max-w-8xl flex items-center justify-start max-w-8xl">
+                        <div class="flex flex-col items-center w-full max-w-sm"> 
+                            <div class="flex space-x-6 mb-1.5 text-gray-700 play-button-container">
+                                <button class="text-lg hover:text-blue-400 transition duration-150">                                        
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="19 20 9 12 19 4 19 20"></polygon><line x1="5" y1="19" x2="5" y2="5"></line></svg>
+                                </button>
+                                <button class="w-8 h-8 rounded-full bg-blue-400 text-white flex items-center justify-center hover:bg-blue-500 transition duration-150 shadow-md play-btn">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polygon points="5 3 19 12 5 21 5 3"></polygon></svg>
+                                </button>
+                                <button class="text-lg hover:text-blue-400 transition duration-150">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="5 4 15 12 5 20 5 4"></polygon><line x1="19" y1="5" x2="19" y2="19"></line></svg>
+                                </button>
+                            </div>
+                            <div class="flex items-center w-full space-x-2 text-xs text-gray-500">
+                                <span class="current-time">00:00</span>
+                                <input type="range" min="0" max="100" value="0" class="timeline w-full h-1 bg-gray-300 rounded-full appearance-none cursor-pointer [&::-webkit-slider-thumb]:appearance-none [&::-webkit-slider-thumb]:w-3 [&::-webkit-slider-thumb]:h-3 [&::-webkit-slider-thumb]:bg-blue-400 [&::-webkit-slider-thumb]:rounded-full [&::-webkit-slider-thumb]:shadow-md">
+                                <span class="total-time">03:20</span>
+                            </div>
+                        </div>
+                    </div>
+                </div> 
             </div>
 
             <div class="film-strip" id="track-rose">
@@ -63,23 +85,18 @@
                             <div class="film-text rose">
                                 <div>
                                     <p class="track-label rose">
-                                        <br>
-                                        <br>
-                                        <br>
                                         TRACK 02</p>
                                     <p class="artist-name">산이, 레이나</p>
                                     <h2 class="song-title rose">한여름밤의 꿀</h2>
                                 </div>
 
                                 <div class="quote-box rose">
-                                    <p class="quote-line">너의 웃음이 바람을 타고</p>
-                                    <p class="quote-line">내 마음 그늘에 스며들던 날,</p>
-                                    <p class="quote-line">별들은 괜히 더 반짝였고</p>
-                                    <p class="quote-line">나는 그저 그 순간이 좋았다.</p>
+                                    <p class="quote-line">“빨개지는 볼</p>
+                                    <p class="quote-line">너 생각나? 로 피어나는 추억의 화원</p>
+                                    <p class="quote-line">색색 아련한 이야기꽃 웃음꽃”</p>
                                 </div>
-
-                                <div class="timestamp rose">
-                                    <p class="timestamp-text">DEVELOPED: 2024 • FUJIFILM SUPERIA 400</p>
+                                <div class="quote-desc">
+                                    <p>마음이 두근거리고 싶을 때, 살포시 설레게 하는 노래</p>
                                 </div>
                             </div>
                         </div>
@@ -91,11 +108,271 @@
                     </div>
                 </div>
             </div>
+                <div class="absolute bottom-[16%] left-[78%] w-1/2 z-[100]" id="player-track-2" style="--theme-color:#e1d36a">
+                    <div class="container max-w-8xl flex items-center justify-start max-w-8xl">
+                        <div class="flex flex-col items-center w-full max-w-sm"> 
+                            <div class="flex space-x-6 mb-1.5 text-gray-700 play-button-container">
+                                <button class="text-lg hover:text-yellow-400 transition duration-150">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="19 20 9 12 19 4 19 20"></polygon><line x1="5" y1="19" x2="5" y2="5"></line></svg>
+                                </button>
+                                <button class="w-8 h-8 rounded-full bg-yellow-300 text-white flex items-center justify-center hover:bg-yellow-400 transition duration-150 shadow-md play-btn">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polygon points="5 3 19 12 5 21 5 3"></polygon></svg>
+                                </button>
+                                <button class="text-lg hover:text-yellow-400 transition duration-150">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="5 4 15 12 5 20 5 4"></polygon><line x1="19" y1="5" x2="19" y2="19"></line></svg>
+                                </button>
+                            </div>
+                            <div class="flex items-center w-full space-x-2 text-xs text-gray-500">
+                                <span class="current-time">00:00</span>
+                                <input type="range" min="0" max="100" value="0" class="timeline w-full h-1 bg-gray-300 rounded-full appearance-none cursor-pointer [&::-webkit-slider-thumb]:appearance-none [&::-webkit-slider-thumb]:w-3 [&::-webkit-slider-thumb]:h-3 [&::-webkit-slider-thumb]:bg-yellow-400 [&::-webkit-slider-thumb]:rounded-full [&::-webkit-slider-thumb]:shadow-md">
+                                <span class="total-time">03:53</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
         </div>
-    </div>
 </body>
 
 <script>
+var tag = document.createElement('script');
+tag.src = "https://www.youtube.com/iframe_api";
+document.head.appendChild(tag);
+
+let players = {};
+let currentPlayingId = null;
+
+const trackData = {
+    'player-track-1': 'faOLT1uiJbI',
+    'player-track-2': 'FWZoL39oFlQ'
+};
+
+function onYouTubeIframeAPIReady() {
+    const hiddenContainer = document.createElement('div');
+    hiddenContainer.id = 'youtube-hidden-container';
+    hiddenContainer.style.display = 'none';
+    document.body.appendChild(hiddenContainer);
+
+    Object.keys(trackData).forEach(id =>{
+        const div = document.createElement('div');
+        div.id = `youtube-player-iframe-${id}`;
+        hiddenContainer.appendChild(div);
+
+        players[id] = new YT.Player(div.id, {
+            videoId: trackData[id],
+            playerVars:{playsinline:1,controls:0,rel:0},
+            events:{onStateChange:onPlayerStateChange}
+        })
+    });
+}
+
+function onPlayerStateChange(event) {
+    const id = event.target.getIframe().id.replace("youtube-player-iframe-","");
+    const btn = document.querySelector(`#${id} .play-btn`);
+    if(!btn) return;
+
+    btn.innerHTML = event.data===YT.PlayerState.PLAYING ? "❚❚" : "▶";
+
+    if(event.data===YT.PlayerState.PLAYING){
+        updateProgressBar(id); 
+    }
+}
+
+function updateProgressBar(id){
+    const player = players[id];
+    const bar = document.querySelector(`#${id} .timeline`);
+    const currentEl = document.querySelector(`#${id} .current-time`);
+    const totalEl = document.querySelector(`#${id} .total-time`);
+
+    if(!bar || !player) return;
+
+    const duration = player.getDuration();
+    const current = player.getCurrentTime();
+    const percent = (current / duration) * 100;   
+
+    currentEl.textContent = formatTime(current);
+    totalEl.textContent = formatTime(duration);
+
+    bar.value = percent;
+    bar.style.setProperty('--progress', `${percent}%`);
+
+    if(player.getPlayerState() === YT.PlayerState.PLAYING){
+        requestAnimationFrame(()=>updateProgressBar(id));
+    }
+}
+
+function formatTime(sec){
+    sec = Math.floor(sec);
+    let m = Math.floor(sec / 60);
+    let s = sec % 60;
+    return `${String(m).padStart(2,'0')}:${String(s).padStart(2,'0')}`;
+}
+
+function togglePlay(id){
+    const p = players[id];
+    if(!p) return;
+
+    if(currentPlayingId && currentPlayingId!==id){
+        players[currentPlayingId].pauseVideo();
+    }
+
+    if(p.getPlayerState()===1) p.pauseVideo();
+    else {
+        p.playVideo();
+        updateProgressBar(id); 
+    }
+
+    currentPlayingId=id;
+}
+
+document.addEventListener("click", e=>{
+    const btn=e.target.closest(".play-btn");
+    if(!btn) return;
+
+    const playerWrap = btn.closest(".absolute[id^='player-track']");
+    if(!playerWrap) return;
+
+    togglePlay(playerWrap.id);
+});
+
+
+document.addEventListener("input", e=>{
+    const bar=e.target.closest(".timeline");
+    if(!bar) return;
+
+    const parent = bar.closest("[id^='player-track']").id;
+    const player = players[parent];
+    const duration = player.getDuration();
+    const seekTime = (bar.value/100)*duration;
+
+    player.seekTo(seekTime,true);
+});
+
+function fadeIn(player, duration = 400) { 
+    let vol = 0;
+    player.setVolume(0);
+    const step = 100 / (duration / 20);
+
+    const fade = setInterval(() => {
+        vol += step;
+        if (vol >= 100) {
+            player.setVolume(100);
+            clearInterval(fade);
+        } else player.setVolume(vol);
+    }, 20);
+}
+
+function fadeOut(player, duration = 400) {
+    let vol = 100;
+    const step = 100 / (duration / 20);
+
+    const fade = setInterval(() => {
+        vol -= step;
+        if(vol <= 0){
+            player.setVolume(0);
+            clearInterval(fade);
+            player.pauseVideo(); 
+        } else player.setVolume(vol);
+    },20);
+}
+
+let userSeeking = false;
+
+document.addEventListener("mousedown", e=>{
+    const bar=e.target.closest(".timeline");
+    if(!bar) return;
+
+    userSeeking = true;
+    const parent = bar.closest("[id^='player-track']").id;
+    fadeOut(players[parent],200);
+});
+
+document.addEventListener("input", e=>{
+    const bar=e.target.closest(".timeline");
+    if(!bar) return;
+
+    const parent=bar.closest("[id^='player-track']").id;
+    const player=players[parent];
+    const duration=player.getDuration();
+    player.seekTo((bar.value/100)*duration,true);
+});
+
+document.addEventListener("mouseup", e=>{
+    if(!userSeeking) return;
+    userSeeking=false;
+
+    const bar=e.target.closest(".timeline");
+    if(!bar) return;
+
+    const parent=bar.closest("[id^='player-track']").id;
+    const player=players[parent];
+
+    player.playVideo();     
+    fadeIn(player,400); 
+});
+</script>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    createPerforations(); 
+
+    const trackContainer = document.getElementById('track-container'); 
+    const prevBtn = document.getElementById('prev-btn');
+    const nextBtn = document.getElementById('next-btn');
+
+    const savedTrack = localStorage.getItem('springFilmsCurrentTrack');
+    let currentTrack = parseInt(savedTrack) || 1; 
+    const totalTracks = 2;
+
+    const initialOffset = (currentTrack - 1) * -50;
+    trackContainer.style.transform = `translateX(${initialOffset}%)`;
+    trackContainer.style.opacity = '1';
+
+    function updateTrackDisplay() {
+        const offset = (currentTrack - 1) * -50; 
+        trackContainer.style.transform = `translateX(${offset}%)`;
+
+        prevBtn.disabled = (currentTrack === 1);
+        nextBtn.disabled = (currentTrack === totalTracks);
+
+        localStorage.setItem('springFilmsCurrentTrack', currentTrack);
+
+        const subtitle = document.querySelector(".subtitle");
+        if(currentTrack === 1){
+            subtitle.classList.remove("green-theme");
+            subtitle.classList.add("red-theme");
+        } else {
+            subtitle.classList.remove("red-theme");
+            subtitle.classList.add("green-theme");
+        }
+        
+        if (currentPlayingId && players[currentPlayingId]) {
+            players[currentPlayingId].pauseVideo();
+            currentPlayingId = null;
+        }
+    }
+
+    nextBtn.addEventListener('click', function() {
+        if (currentTrack < totalTracks) {
+            currentTrack++;
+            updateTrackDisplay();
+        }
+    });
+
+    prevBtn.addEventListener('click', function() {
+        if (currentTrack > 1) {
+            currentTrack--;
+            updateTrackDisplay();
+        }
+    });
+
+    prevBtn.disabled = (currentTrack === 1);
+    nextBtn.disabled = (currentTrack === totalTracks);
+
+    setTimeout(() => {
+        document.body.classList.add('loaded');
+    }, 20);
+});
+
         function createPerforations() {
             const containers = [
                 { left: 'perf-left', right: 'perf-right' }
@@ -115,42 +392,3 @@
         }
 </script>
 
-<script>
-document.addEventListener('DOMContentLoaded', function() {
-    createPerforations(); 
-
-    const trackContainer = document.getElementById('track-container'); 
-    const prevBtn = document.getElementById('prev-btn');
-    const nextBtn = document.getElementById('next-btn');
-
-    let currentTrack = 1; 
-    const totalTracks = 2; 
-
-    function updateTrackDisplay() {
-        const offset = (currentTrack - 1) * -50; 
-        trackContainer.style.transform = `translateX(${offset}%)`;
-
-        prevBtn.disabled = (currentTrack === 1);
-        nextBtn.disabled = (currentTrack === totalTracks);
-    }
-
-    nextBtn.addEventListener('click', function() {
-        if (currentTrack < totalTracks) {
-            currentTrack++;
-            updateTrackDisplay();
-        }
-    });
-
-    prevBtn.addEventListener('click', function() {
-        if (currentTrack > 1) {
-            currentTrack--;
-            updateTrackDisplay();
-        }
-    });
-
-    updateTrackDisplay();
-    setTimeout(() => {
-        document.body.classList.add('loaded');
-    }, 10);
-});
-</script>
