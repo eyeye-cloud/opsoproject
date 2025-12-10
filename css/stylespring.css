@@ -329,6 +329,11 @@
             transform:scale(1.12);
         }
 
+        #track-container { 
+            transform: translateX(0%);
+            opacity:0;
+        }
+
         @media (max-width: 768px) {
             .film-grid {
                 grid-template-columns: 1fr;

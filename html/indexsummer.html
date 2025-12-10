@@ -329,8 +329,7 @@ document.addEventListener('DOMContentLoaded', function() {
     const prevBtn = document.getElementById('prev-btn');
     const nextBtn = document.getElementById('next-btn');
 
-    const savedTrack = localStorage.getItem('springFilmsCurrentTrack');
-    let currentTrack = parseInt(savedTrack) || 1; 
+    let currentTrack = 1;
     const totalTracks = 2;
 
     const initialOffset = (currentTrack - 1) * -50;
@@ -343,9 +342,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
         prevBtn.disabled = (currentTrack === 1);
         nextBtn.disabled = (currentTrack === totalTracks);
-
-        localStorage.setItem('springFilmsCurrentTrack', currentTrack);
-
+        
         const subtitle = document.querySelector(".subtitle");
         if(currentTrack === 1){
             subtitle.classList.remove("green-theme");
