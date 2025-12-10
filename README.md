@@ -9,15 +9,14 @@
 
 『노래』라는 주제와 『계절』의 컬러를 더하여 Opso만의 힐링송를 소개합니다
 
-<<<<<<< HEAD
 영화테마를 적용하여 작품을 보는 듯한 느낌을 더했습니다
  
- 전체화면(F11)으로 감상하는 것을 권장드립니다
-=======
+전체화면(F11)으로 감상하는 것을 권장드립니다
+
 영화테마를 적용하여 작품을 보는 듯한 느낌을 더했습니다. 
  
- 전체화면(F11)으로 감상하는 것을 권장드립니다.
->>>>>>> b4f38a33d99c41afec887759d9f4c1f2e2e4a6a2
+전체화면(F11)으로 감상하는 것을 권장드립니다.
+
 
 >Open source project team for Hanyang University
 >
@@ -94,7 +93,7 @@
 
 #### 작업 장면
 
-<img src="https://github.com/user-attachments/assets/1b1a6b93-d52a-40ae-831a-5b57200ee67d" width="500" height="500"/>
+<img src="https://github.com/user-attachments/assets/1b1a6b93-d52a-40ae-831a-5b57200ee67d" width="300" height="300"/>
 
 #### Reference 
 
