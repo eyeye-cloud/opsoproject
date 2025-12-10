@@ -65,7 +65,7 @@
         }
 
         .subtitle {
-            color: #84acd3;
+            color: #4a637c;
             opacity: 0.5;
             font-style: italic;
             font-weight: 500;
@@ -75,11 +75,11 @@
         }
 
         .subtitle.red-theme {
-            color: #84acd3;
+            color: #4a637c;
         }
 
         .subtitle.green-theme {
-            color: #d2b618;
+            color: #8e7c15;
         }
 
         .button {

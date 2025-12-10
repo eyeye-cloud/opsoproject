@@ -11,7 +11,18 @@
 </head>
 <body>
         <div class="header">           
-            <h1>Winter Films</h1>
+            <div class="relative">
+                <h1>Winter Films</h1>
+                <button id="home-btn" class="absolute right-[3%] top-1/2 transform -translate-y-1/2 text-gray-400 hover:text-gray-500 transition-colors duration-200 group">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 25 25" class="w-8 h-8">
+                        <path class="roof stroke-gray-500 group-hover:stroke-gray-600"stroke-linecap="round" stroke-linejoin="round" stroke-width="2.3" d="M2 12 L12 3 L22 12" />
+                        <line x1="5" y1="12" x2="5" y2="20" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+                        <line x1="19" y1="12" x2="19" y2="20" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+                        <line x1="5" y1="20" x2="19" y2="20" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+                        <rect x="10" y="11.5" width="4.4" height="4.2" fill="currentColor"/>
+                    </svg>
+                </button>
+            </div>
             <p class="subtitle">
                 # 긴 겨울을 지나온 네게, 고요한 온기가 눈처럼 내려앉는 시간<br>
             </p>
@@ -46,7 +57,7 @@
                                 <p class="quote-line">한참이 걸려도 그대 반드시 행복해지세요”</p>
                             </div>
                             <div class="quote-desc">
-                                <p>내추운 겨울, 시린 마음을 데워주는 노래</p>
+                                <p>추운 겨울, 시린 마음을 데워주는 노래</p>
                             </div>
                         </div>
                     </div>
@@ -386,4 +397,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 });
             });
         }
+document.getElementById('home-btn').addEventListener('click', () => {
+    window.location.href = '/index.html'; 
+});
 </script>

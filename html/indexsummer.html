@@ -11,7 +11,18 @@
 </head>
 <body>
         <div class="header">           
-            <h1>Summer Films</h1>
+            <div class="relative">
+                <h1>Summer Films</h1>
+                <button id="home-btn" class="absolute right-[3%] top-1/2 transform -translate-y-1/2 text-gray-400 hover:text-gray-500 transition-colors duration-200 group">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 25 25" class="w-8 h-8">
+                        <path class="roof stroke-gray-500 group-hover:stroke-gray-600"stroke-linecap="round" stroke-linejoin="round" stroke-width="2.3" d="M2 12 L12 3 L22 12" />
+                        <line x1="5" y1="12" x2="5" y2="20" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+                        <line x1="19" y1="12" x2="19" y2="20" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+                        <line x1="5" y1="20" x2="19" y2="20" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+                        <rect x="10" y="11.5" width="4.4" height="4.2" fill="currentColor"/>
+                    </svg>
+                </button>
+            </div>
             <p class="subtitle">
                 # 가장 빛나는 계절에, 서툰 청춘의 마음이 웃음으로 나란히 닿는 순간<br>
             </p>
@@ -41,9 +52,8 @@
                             </div>
 
                             <div class="quote-box amber">
-                                <p class="quote-line">“시간은 막지 못해</p>
-                                <p class="quote-line">계절이 바뀔 땐 아쉬움 하나 안 남게</p>
-                                <p class="quote-line">꽃 피는 봄을 지나 타오르는 시간 지금을 기억해”</p>
+                                <p class="quote-line">“꽃 피는 봄을 지나 타오르는 시간 지금을 기억해</p>
+                                <p class="quote-line">눈물마저 얼어 버릴 날이 와도 녹여 버릴 수 있게”</p>
                             </div>
                             <div class="quote-desc">
                                 <p>듣는 순간, 청춘드라마 속 주인공이 된 듯한 노래</p>
@@ -390,5 +400,8 @@ document.addEventListener('DOMContentLoaded', function() {
                 });
             });
         }
+document.getElementById('home-btn').addEventListener('click', () => {
+    window.location.href = '/index.html'; 
+});
 </script>
 
