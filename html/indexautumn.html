@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <div class="container">
+        <link rel="stylesheet" href="../css/stylesautumn.css"> 
+        <script src="https://cdn.tailwindcss.com"></script>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Italiana&display=swap" rel="stylesheet">
+        <title>Autumn Films</title>
+</head>
+<body>
+        <div class="header">           
+            <div class="relative">
+                <h1>Autumn Films</h1>
+                <button id="home-btn" class="absolute right-[3%] top-1/2 transform -translate-y-1/2 text-gray-400 hover:text-gray-500 transition-colors duration-200 group">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 25 25" class="w-8 h-8">
+                        <path class="roof stroke-gray-500 group-hover:stroke-gray-600"stroke-linecap="round" stroke-linejoin="round" stroke-width="2.3" d="M2 12 L12 3 L22 12" />
+                        <line x1="5" y1="12" x2="5" y2="20" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+                        <line x1="19" y1="12" x2="19" y2="20" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+                        <line x1="5" y1="20" x2="19" y2="20" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+                        <rect x="10" y="11.5" width="4.4" height="4.2" fill="currentColor"/>
+                    </svg>
+                </button>
+            </div>
+            <p class="subtitle">
+                # 가을빛 스며든 길, 오래 묻어둔 기억들이 다시 고개드는 때<br>
+            </p>
+            <div class="movie-line1"></div>
+            <div class="movie-line2"></div>
+            <div class="perforation-container left" id="perf-left"></div>
+            <div class="perforation-container right" id="perf-right"></div>
+            <div class="button">
+                <button id="prev-btn" class="prev-btn">«</button>
+                <button id="next-btn" class="next-btn">»</button>
+            </div> 
+        </div>
+        <div class="track-container" id="track-container">
+            <div class="film-strip" id="track-amber">
+                <div class="film-content">
+                    <div class="film-grid">
+                        <div class="film-image">
+                            <img src="../asset/썸네일%20아카이브/반짝2006.jpg" alt="반짝 빛나던 나의 2006년">
+                            <div class="film-overlay"></div>
+                        </div>
+                        
+                        <div class="film-text amber">
+                            <div>
+                                <p class="track-label amber">TRACK 01</p>
+                                <p class="artist-name">적재</p>
+                                <h2 class="song-title amber">반짝 빛나던 나의 2006년</h2>
+                            </div>
+
+                            <div class="quote-box amber">
+                                <p class="quote-line">“세상이 하나둘씩 이해되기 시작할 때쯤</p>
+                                <p class="quote-line">더 그리워지는 건 왜일까</p>
+                                <p class="quote-line">반짝 빛나던 나의 2006년”</p>
+                            </div>
+                            <div class="quote-desc">
+                                <p>학원을 마치고 돌아오던 버스 안에서,</p>
+                                <p>덜컹거리던 하루를 조용히 진정시켜주던 노래</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                    <div class="absolute bottom-[16%] left-[56%] w-1/2 z-[100]" id="player-track-1" style="--theme-color:#deab70">
+                    <div class="container max-w-8xl flex items-center justify-start max-w-8xl">
+                        <div class="flex flex-col items-center w-full max-w-sm"> 
+                            <div class="flex space-x-6 mb-1.5 text-gray-700 play-button-container">
+                                <button class="text-lg hover:text-yellow-400 transition duration-150">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="19 20 9 12 19 4 19 20"></polygon><line x1="5" y1="19" x2="5" y2="5"></line></svg>
+                                </button>
+                                <button class="w-8 h-8 rounded-full bg-yellow-400 text-white flex items-center justify-center hover:bg-yellow-500 transition duration-150 shadow-md play-btn">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polygon points="5 3 19 12 5 21 5 3"></polygon></svg>
+                                </button>
+                                <button class="text-lg hover:text-yellow-400 transition duration-150">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="5 4 15 12 5 20 5 4"></polygon><line x1="19" y1="5" x2="19" y2="19"></line></svg>
+                                </button>
+                            </div>
+                            <div class="flex items-center w-full space-x-2 text-xs text-gray-500">
+                                <span class="current-time">00:00</span>
+                                <input type="range" min="0" max="100" value="0" class="timeline w-full h-1 bg-gray-300 rounded-full appearance-none cursor-pointer [&::-webkit-slider-thumb]:appearance-none [&::-webkit-slider-thumb]:w-3 [&::-webkit-slider-thumb]:h-3 [&::-webkit-slider-thumb]:bg-red-400 [&::-webkit-slider-thumb]:rounded-full [&::-webkit-slider-thumb]:shadow-md">
+                                <span class="total-time">04:58</span>
+                            </div>
+                        </div>
+                    </div>
+                </div> 
+            </div>
+
+            <div class="film-strip" id="track-rose">
+                <div class="film-perforations film-perforations-left" id="perf2left"></div>
+                <div class="film-perforations film-perforations-right" id="perf2right"></div>
+                
+                <div class="film-content">
+                    <div class="film-grid" style="direction: rtl;">
+                        <div style="direction: ltr;">
+                            <div class="film-text rose">
+                                <div>
+                                    <p class="track-label rose">
+                                        TRACK 02</p>
+                                    <p class="artist-name">신인류</p>
+                                    <h2 class="song-title rose">날씨의 요정</h2>
+                                </div>
+
+                                <div class="quote-box rose">
+                                    <p class="quote-line">“내 표정은 너에게 잃었어</p>
+                                    <p class="quote-line">우리 지금처럼 날씨 이야기를 해요</p>
+                                    <p class="quote-line">햇살 같은 그대가 가끔 와주면 좋겠어요”</p>
+                                </div>
+                                <div class="quote-desc">
+                                    <p>언제나 같은 자리에서 나를 맞아주던, 보금자리 같은 노래</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="film-image" style="direction: ltr;">
+                            <img src="../asset/썸네일%20아카이브/날씨의 요정.jpg" alt="날씨의 요정">
+                            <div class="film-overlay"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+                <div class="absolute bottom-[16%] left-[78%] w-1/2 z-[100]" id="player-track-2" style="--theme-color:#55bc88">
+                <div class="container max-w-8xl flex items-center justify-start max-w-8xl">
+                    <div class="flex flex-col items-center w-full max-w-sm"> 
+                        <div class="flex space-x-6 mb-1.5 text-gray-700 play-button-container">
+                            <button class="text-lg hover:text-green-400 transition duration-150">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="19 20 9 12 19 4 19 20"></polygon><line x1="5" y1="19" x2="5" y2="5"></line></svg>
+                            </button>
+                            <button class="w-8 h-8 rounded-full bg-green-400 text-white flex items-center justify-center hover:bg-green-500 transition duration-150 shadow-md play-btn">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polygon points="5 3 19 12 5 21 5 3"></polygon></svg>
+                            </button>
+                            <button class="text-lg hover:text-green-400 transition duration-150">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="5 4 15 12 5 20 5 4"></polygon><line x1="19" y1="5" x2="19" y2="19"></line></svg>
+                            </button>
+                        </div>
+                        <div class="flex items-center w-full space-x-2 text-xs text-gray-500">
+                            <span class="current-time">00:00</span>
+                            <input type="range" min="0" max="100" value="0" class="timeline w-full h-1 bg-gray-300 rounded-full appearance-none cursor-pointer [&::-webkit-slider-thumb]:appearance-none [&::-webkit-slider-thumb]:w-3 [&::-webkit-slider-thumb]:h-3 [&::-webkit-slider-thumb]:bg-green-400 [&::-webkit-slider-thumb]:rounded-full [&::-webkit-slider-thumb]:shadow-md">
+                            <span class="total-time">03:47</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+</body>
+
+<script>
+var tag = document.createElement('script');
+tag.src = "https://www.youtube.com/iframe_api";
+document.head.appendChild(tag);
+
+let players = {};
+let currentPlayingId = null;
+
+const trackData = {
+    'player-track-1': '67i2zCI4G14',
+    'player-track-2': 'gNXFtFVz8NI'
+};
+
+function onYouTubeIframeAPIReady() {
+    const hiddenContainer = document.createElement('div');
+    hiddenContainer.id = 'youtube-hidden-container';
+    hiddenContainer.style.display = 'none';
+    document.body.appendChild(hiddenContainer);
+
+    Object.keys(trackData).forEach(id =>{
+        const div = document.createElement('div');
+        div.id = `youtube-player-iframe-${id}`;
+        hiddenContainer.appendChild(div);
+
+        players[id] = new YT.Player(div.id, {
+            videoId: trackData[id],
+            playerVars:{playsinline:1,controls:0,rel:0},
+            events:{onStateChange:onPlayerStateChange}
+        })
+    });
+}
+
+function onPlayerStateChange(event) {
+    const id = event.target.getIframe().id.replace("youtube-player-iframe-","");
+    const btn = document.querySelector(`#${id} .play-btn`);
+    if(!btn) return;
+
+    btn.innerHTML = event.data===YT.PlayerState.PLAYING ? "❚❚" : "▶";
+
+    if(event.data===YT.PlayerState.PLAYING){
+        updateProgressBar(id); 
+    }
+}
+
+function updateProgressBar(id){
+    const player = players[id];
+    const bar = document.querySelector(`#${id} .timeline`);
+    const currentEl = document.querySelector(`#${id} .current-time`);
+    const totalEl = document.querySelector(`#${id} .total-time`);
+
+    if(!bar || !player) return;
+
+    const duration = player.getDuration();
+    const current = player.getCurrentTime();
+    const percent = (current / duration) * 100;   
+
+    currentEl.textContent = formatTime(current);
+    totalEl.textContent = formatTime(duration);
+
+    bar.value = percent;
+    bar.style.setProperty('--progress', `${percent}%`);
+
+    if(player.getPlayerState() === YT.PlayerState.PLAYING){
+        requestAnimationFrame(()=>updateProgressBar(id));
+    }
+}
+
+function formatTime(sec){
+    sec = Math.floor(sec);
+    let m = Math.floor(sec / 60);
+    let s = sec % 60;
+    return `${String(m).padStart(2,'0')}:${String(s).padStart(2,'0')}`;
+}
+
+function togglePlay(id){
+    const p = players[id];
+    if(!p) return;
+
+    if(currentPlayingId && currentPlayingId!==id){
+        players[currentPlayingId].pauseVideo();
+    }
+
+    if(p.getPlayerState()===1) p.pauseVideo();
+    else {
+        p.playVideo();
+        updateProgressBar(id); 
+    }
+
+    currentPlayingId=id;
+}
+
+document.addEventListener("click", e=>{
+    const btn=e.target.closest(".play-btn");
+    if(!btn) return;
+    const parent=btn.closest(".absolute");
+    if(parent) togglePlay(parent.id);
+});
+
+document.addEventListener("input", e=>{
+    const bar=e.target.closest(".timeline");
+    if(!bar) return;
+
+    const parent = bar.closest(".absolute").id;
+    const player = players[parent];
+    const duration = player.getDuration();
+    const seekTime = (bar.value/100)*duration;
+
+    player.seekTo(seekTime,true);
+});
+
+function fadeIn(player, duration = 400) { 
+    let vol = 0;
+    player.setVolume(0);
+    const step = 100 / (duration / 20);
+
+    const fade = setInterval(() => {
+        vol += step;
+        if (vol >= 100) {
+            player.setVolume(100);
+            clearInterval(fade);
+        } else player.setVolume(vol);
+    }, 20);
+}
+
+function fadeOut(player, duration = 400) {
+    let vol = 100;
+    const step = 100 / (duration / 20);
+
+    const fade = setInterval(() => {
+        vol -= step;
+        if(vol <= 0){
+            player.setVolume(0);
+            clearInterval(fade);
+            player.pauseVideo(); 
+        } else player.setVolume(vol);
+    },20);
+}
+
+let userSeeking = false;
+
+document.addEventListener("mousedown", e=>{
+    const bar=e.target.closest(".timeline");
+    if(!bar) return;
+
+    userSeeking = true;
+    if(currentPlayingId && players[currentPlayingId]){
+        fadeOut(players[currentPlayingId],200); 
+    }
+});
+
+document.addEventListener("input", e=>{
+    const bar=e.target.closest(".timeline");
+    if(!bar) return;
+
+    const parent=bar.closest(".absolute").id;
+    const player=players[parent];
+    const duration=player.getDuration();
+    player.seekTo((bar.value/100)*duration,true);
+});
+
+document.addEventListener("mouseup", e=>{
+    if(!userSeeking) return;
+    userSeeking=false;
+
+    const bar=e.target.closest(".timeline");
+    if(!bar) return;
+
+    const parent=bar.closest(".absolute").id;
+    const player=players[parent];
+
+    player.playVideo();     
+    fadeIn(player,400); 
+});
+</script>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    createPerforations(); 
+
+    const trackContainer = document.getElementById('track-container'); 
+    const prevBtn = document.getElementById('prev-btn');
+    const nextBtn = document.getElementById('next-btn');
+
+    const savedTrack = localStorage.getItem('springFilmsCurrentTrack');
+    let currentTrack = parseInt(savedTrack) || 1; 
+    const totalTracks = 2;
+
+    const initialOffset = (currentTrack - 1) * -50;
+    trackContainer.style.transform = `translateX(${initialOffset}%)`;
+    trackContainer.style.opacity = '1';
+
+    function updateTrackDisplay() {
+        const offset = (currentTrack - 1) * -50; 
+        trackContainer.style.transform = `translateX(${offset}%)`;
+
+        prevBtn.disabled = (currentTrack === 1);
+        nextBtn.disabled = (currentTrack === totalTracks);
+
+        localStorage.setItem('springFilmsCurrentTrack', currentTrack);
+
+        const subtitle = document.querySelector(".subtitle");
+        if(currentTrack === 1){
+            subtitle.classList.remove("green-theme");
+            subtitle.classList.add("red-theme");
+        } else {
+            subtitle.classList.remove("red-theme");
+            subtitle.classList.add("green-theme");
+        }
+        
+        if (currentPlayingId && players[currentPlayingId]) {
+            players[currentPlayingId].pauseVideo();
+            currentPlayingId = null;
+        }
+    }
+
+    nextBtn.addEventListener('click', function() {
+        if (currentTrack < totalTracks) {
+            currentTrack++;
+            updateTrackDisplay();
+        }
+    });
+
+    prevBtn.addEventListener('click', function() {
+        if (currentTrack > 1) {
+            currentTrack--;
+            updateTrackDisplay();
+        }
+    });
+
+    prevBtn.disabled = (currentTrack === 1);
+    nextBtn.disabled = (currentTrack === totalTracks);
+
+    setTimeout(() => {
+        document.body.classList.add('loaded');
+    }, 20);
+});
+
+        function createPerforations() {
+            const containers = [
+                { left: 'perf-left', right: 'perf-right' }
+            ];
+
+            containers.forEach(({ left, right }) => {
+                [left, right].forEach(id => {
+                    const container = document.getElementById(id);
+                    container.innerHTML = '';
+                    for (let i = 0; i < 8; i++) {
+                        const hole = document.createElement('div');
+                        hole.className = 'perforation-hole';
+                        container.appendChild(hole);
+                    }
+                });
+            });
+        }
+document.getElementById('home-btn').addEventListener('click', () => {
+    window.location.href = 'https://eyeye-cloud.github.io/opsoproject/';
+});
+</script>

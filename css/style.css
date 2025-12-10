@@ -1,0 +1,314 @@
+html {
+    overflow-y: scroll; 
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #000000; 
+}
+
+.first-page-section {
+    height: 100vh;
+    position: relative; 
+    transition: transform 1.3s ease-out, opacity 0.5s ease-out;
+}
+
+.first-page-section.hide { 
+    transform: translateY(-50px);
+    opacity: 0;
+}
+
+.slate-container {
+    position: relative; 
+    top: 0; 
+    right: 0;
+    width: 80%; 
+    height: 10%; 
+}
+
+.diamond-wrapper {
+    position: absolute; 
+    width: 14.5vh;
+    height: 9.7vh;
+    transform: skewX(30deg);
+    background-color: rgb(244, 244, 244);
+    top: 30%;
+}
+
+.item-1 {
+    left: 31%; 
+}
+
+.item-2 {
+    left: 43.5%;
+}
+
+.item-3 {
+    left: 56%;
+}
+
+.item-4 {
+    left: 68.5%;
+}
+
+.item-5 {
+    left: 81%;
+}
+
+.item-6 {
+    left: 93.5%;
+}
+
+.item-7 {
+    left: 106%;
+}
+
+.item-8 {
+    left: 118.5%;
+}
+
+.top-title {
+    position: absolute;
+    top: 1.2%;
+    left: 3.6%;
+    color: #ffffff;
+    font-size: 10.96vh;
+    font-family: 'Italiana', sans-serif;
+    font-weight: 400;
+}
+.top-image {
+    position: absolute;
+    top: 17.5%;
+    left: 4.95%;
+
+    width: 121.05vh; 
+    height: 120vh;
+}
+
+.top-image img {
+    width: 137%;
+    height: 66%;
+}
+
+.logo-image {
+    position: absolute;
+    top: 9.5%;
+    left: 17.5%;
+
+    width: 121.05vh; 
+    height: 120vh;
+    z-index: 10;
+}
+
+.logo-image img {
+    width: 2.6%;
+    height: 2.6%;
+}
+
+.middle-box {
+    position: absolute; 
+    width: 31.5vh; 
+    height: 120vh;
+
+    background-color: #000000; 
+    top: 17.5%;
+    left: 19.1%;
+    z-index: 5;
+}
+
+.middle-title {
+    position: absolute;
+    top: 17.5%;
+    left: 20.25%;
+    color: #ffffff;
+    font-size: 6.9vh;
+    z-index: 10;
+    font-family: 'Italiana', sans-serif;
+    font-weight: 400;
+    opacity: 0;
+    transform: translateY(30px);
+    animation-fill-mode: forwards;
+}
+
+.middle-text {
+    position: absolute;
+    top: 51.7%;
+    left: 20.22%;
+    color: #ffffff;
+    font-size: 2.27vh;
+    z-index: 10;  
+    font-style: italic;
+    font-weight: 300;
+    opacity: 0;
+    transform: translateY(30px);
+    animation-fill-mode: forwards;
+}
+
+@keyframes fadeUp {
+    0% {
+        opacity: 0;
+        transform: translateY(5px);
+    }
+    100% {
+        opacity: 0.9; 
+        transform: translateY(0);
+    }
+}
+
+.middle-title {
+    animation: fadeUp 1s ease-out 0.12s forwards; 
+}
+
+.middle-text {
+    animation: fadeUp 1s ease-out 0.45s forwards; 
+}
+
+.fade-in {
+    opacity: 0.9 !important;
+}
+
+.second-page-section {
+    position: relative;
+    padding-top: 100px;
+    height: 82vh; 
+    min-height: 82vh;
+    opacity: 0;
+    transition: opacity 0.7s ease-out;
+}
+
+.second-page-section div[class='-image'], 
+.second-page-section div[class='-title'] {
+    opacity: 0 !important;
+    transition: opacity 0.4s ease-out;
+    transform: none !important;
+}
+
+.second-page-section .show-content {
+    opacity: 0.8;
+    transform: translateY(0);
+}
+
+.spring-image {
+    position: absolute;
+    top: 0px;
+    left: 0%;
+    width: 25%;
+    height: 82vh;
+    overflow: hidden;
+    mask-image: 
+        linear-gradient(to bottom, black 70%, transparent 100%);
+    -webkit-mask-image:
+        linear-gradient(to bottom, black 70%, transparent 100%);
+}
+
+.spring-title {
+    position: absolute;
+    bottom: 0px;
+    left: 7%;
+    color: #ffffff;
+    font-size: 7.3vh;
+    font-family: 'Italiana', sans-serif;
+    font-weight: 550;
+}
+
+.summer-image {
+    position: absolute;
+    top: 148px;
+    left: 25%;
+    width: 25%;
+    height: 82vh;
+    overflow: hidden;
+    mask-image:
+        linear-gradient(to top, black 70%, transparent 100%);
+    -webkit-mask-image: 
+        linear-gradient(to top, black 70%, transparent 100%);
+}
+
+.summer-title {
+    position: absolute;
+    top: 30px;
+    left: 31%;
+    color: #ffffff;
+    font-size: 7.3vh;
+    font-family: 'Italiana', sans-serif;
+    font-weight: 550;
+}
+
+.autumn-image {
+    position: absolute;
+    top: 0px;
+    left: 50%;
+    width: 25%;
+    height: 82vh;
+    overflow: hidden;
+    mask-image: 
+        linear-gradient(to bottom, black 70%, transparent 100%);
+    -webkit-mask-image: 
+        linear-gradient(to bottom, black 70%, transparent 100%);
+}
+
+.autumn-title {
+    position: absolute;
+    bottom: 0;
+    left: 56%;
+    color: #ffffff;
+    font-size: 7.3vh;
+    font-family: 'Italiana', sans-serif;
+    font-weight: 550;
+}
+
+.winter-image {
+    position: absolute;
+    top: 148px;
+    left: 75%;
+    width: 25%;
+    height: 82vh;
+    overflow: hidden;
+    mask-image:
+        linear-gradient(to top, black 70%, transparent 100%);
+    -webkit-mask-image:
+        linear-gradient(to top, black 70%, transparent 100%);
+}
+
+.winter-title {
+    position: absolute;
+    top: 30px;
+    left: 82.3%;
+    color: #ffffff;
+    font-size: 7.3vh;
+    font-family: 'Italiana', sans-serif;
+    font-weight: 550;
+}
+
+.spring-image img,
+.summer-image img,
+.autumn-image img,
+.winter-image img {
+    width: 100%;  
+    height: 100%;
+    object-fit: cover;
+    transition: opacity 0.3s ease-in-out;
+    display: block;
+}
+
+.spring-image:hover img,
+.summer-image:hover img,
+.autumn-image:hover img,
+.winter-image:hover img {
+    opacity: 0.6;
+    cursor: pointer;
+}
+
+.italiana-regular {
+  font-family: 'Italiana', sans-serif;
+  font-style: normal;
+}
+
+.second-page-section a {
+    text-decoration: none; /* 밑줄 제거 */
+    color: inherit; /* 부모 요소의 색상 상속 */
+    display: block; /* 링크가 div를 완전히 감싸도록 설정 */
+}
