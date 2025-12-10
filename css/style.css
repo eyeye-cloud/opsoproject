@@ -93,6 +93,21 @@ body {
     height: 66%;
 }
 
+.logo-image {
+    position: absolute;
+    top: 9.5%;
+    left: 17.5%;
+
+    width: 121.05vh; 
+    height: 120vh;
+    z-index: 10;
+}
+
+.logo-image img {
+    width: 2.6%;
+    height: 2.6%;
+}
+
 .middle-box {
     position: absolute; 
     width: 31.5vh; 
