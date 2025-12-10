@@ -1,0 +1,22 @@
+# IDE 및 OS 관련 파일
+.DS_Store
+Thumbs.db
+.vscode/
+
+# Node.js 패키지 (TailwindCSS)
+node_modules/
+package-lock.json
+
+# 외부 라이브러리/프레임워크 관련 파일 
+# dist/
+
+# 캐시 또는 빌드 결과 폴더
+/cache
+/dist
+/build
+
+# 로그 및 임시 파일
+*.log
+*.tmp
+temp/
+tmp/
