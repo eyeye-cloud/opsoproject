@@ -89,6 +89,10 @@
 
 <img width="339" height="957" alt="Image" src="https://github.com/user-attachments/assets/ed0b672c-8e73-4e08-a9ea-17de992557c4" />
 
+김예인 24회, 김서진 20회, 권용준 16회, 최선민 14회 
+
+총 74회의 커밋을 진행하였습니다
+
 #### 작업 장면
 
 <img src="https://github.com/user-attachments/assets/1b1a6b93-d52a-40ae-831a-5b57200ee67d" width="300" height="300"/>
