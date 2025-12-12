@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="ko">
-<head>
+<head> <!--권용준: 봄 세부 페이지에서 만든 틀을 여름 세부 페이지에 적용하였음.-->
     <div class="container">
         <link rel="stylesheet" href="../css/stylesummer.css"> 
         <script src="https://cdn.tailwindcss.com"></script>
@@ -39,12 +39,12 @@
             <div class="film-strip" id="track-amber">
                 <div class="film-content">
                     <div class="film-grid">
-                        <div class="film-image">
+                        <div class="film-image"> <!--김예인: 곡 썸네일 연결, 파일 경로 변경-->
                             <img src="../asset/썸네일%20아카이브/let it be summer.png" alt="let it be summer">
                             <div class="film-overlay"></div>
                         </div>
                         
-                        <div class="film-text amber">
+                        <div class="film-text amber"> <!--권용준: 해당 계절에 맞는 곡 제목, 아티스트, 가사, 힐링송 이유 삽입-->
                             <div>
                                 <p class="track-label amber">TRACK 01</p>
                                 <p class="artist-name">Young K (DAY6)</p>
@@ -61,7 +61,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="absolute bottom-[16%] left-[56%] w-1/2 z-[100]" id="player-track-1" style="--theme-color:#84acd3">
+                <div class="absolute bottom-[16%] left-[56%] w-1/2 z-[100]" id="player-track-1" style="--theme-color:#84acd3"> <!--김예인: 크기와 버튼의 색상, 호버 시 변할 색상 등의 스타일을 계절 테마 및 곡에 맞게 직접 조정-->
                     <div class="container max-w-8xl flex items-center justify-start max-w-8xl">
                         <div class="flex flex-col items-center w-full max-w-sm"> 
                             <div class="flex space-x-6 mb-1.5 text-gray-700 play-button-container">
@@ -76,7 +76,7 @@
                                 </button>
                             </div>
                             <div class="flex items-center w-full space-x-2 text-xs text-gray-500">
-                                <span class="current-time">00:00</span>
+                                <span class="current-time">00:00</span> <!--김예인: 노래 시작 및 끝나는 시간 정확히 삽입-->
                                 <input type="range" min="0" max="100" value="0" class="timeline w-full h-1 bg-gray-300 rounded-full appearance-none cursor-pointer [&::-webkit-slider-thumb]:appearance-none [&::-webkit-slider-thumb]:w-3 [&::-webkit-slider-thumb]:h-3 [&::-webkit-slider-thumb]:bg-blue-400 [&::-webkit-slider-thumb]:rounded-full [&::-webkit-slider-thumb]:shadow-md">
                                 <span class="total-time">03:20</span>
                             </div>
@@ -86,13 +86,10 @@
             </div>
 
             <div class="film-strip" id="track-rose">
-                <div class="film-perforations film-perforations-left" id="perf2left"></div>
-                <div class="film-perforations film-perforations-right" id="perf2right"></div>
-                
                 <div class="film-content">
                     <div class="film-grid" style="direction: rtl;">
                         <div style="direction: ltr;">
-                            <div class="film-text rose">
+                            <div class="film-text rose"> <!--권용준: 해당 계절에 맞는 곡 제목, 아티스트, 가사, 힐링송 이유 삽입-->
                                 <div>
                                     <p class="track-label rose">
                                         TRACK 02</p>
@@ -111,14 +108,14 @@
                             </div>
                         </div>
 
-                        <div class="film-image" style="direction: ltr;">
+                        <div class="film-image" style="direction: ltr;"> <!--김예인: 곡 썸네일 연결, 파일 경로 변경-->
                             <img src="../asset/썸네일%20아카이브/한 여름밤의 꿀.jpg" alt="한 여름밤의 꿀">
                             <div class="film-overlay"></div>
                         </div>
                     </div>
                 </div>
             </div>
-                <div class="absolute bottom-[16%] left-[78%] w-1/2 z-[100]" id="player-track-2" style="--theme-color:#e1d36a">
+                <div class="absolute bottom-[16%] left-[78%] w-1/2 z-[100]" id="player-track-2" style="--theme-color:#e1d36a"> <!--김예인: 크기와 버튼의 색상, 호버 시 변할 색상 등의 스타일을 계절 테마 및 곡에 맞게 직접 조정-->
                     <div class="container max-w-8xl flex items-center justify-start max-w-8xl">
                         <div class="flex flex-col items-center w-full max-w-sm"> 
                             <div class="flex space-x-6 mb-1.5 text-gray-700 play-button-container">
@@ -133,7 +130,7 @@
                                 </button>
                             </div>
                             <div class="flex items-center w-full space-x-2 text-xs text-gray-500">
-                                <span class="current-time">00:00</span>
+                                <span class="current-time">00:00</span> <!--김예인: 노래 시작 및 끝나는 시간 정확히 삽입-->
                                 <input type="range" min="0" max="100" value="0" class="timeline w-full h-1 bg-gray-300 rounded-full appearance-none cursor-pointer [&::-webkit-slider-thumb]:appearance-none [&::-webkit-slider-thumb]:w-3 [&::-webkit-slider-thumb]:h-3 [&::-webkit-slider-thumb]:bg-yellow-400 [&::-webkit-slider-thumb]:rounded-full [&::-webkit-slider-thumb]:shadow-md">
                                 <span class="total-time">03:53</span>
                             </div>
@@ -143,7 +140,7 @@
         </div>
 </body>
 
-<script>
+<script> //구현한 기능은 봄 세부 페이지와 동일함. 전반적으로 AI가 구현하였음.
 var tag = document.createElement('script');
 tag.src = "https://www.youtube.com/iframe_api";
 document.head.appendChild(tag);
@@ -152,7 +149,7 @@ let players = {};
 let currentPlayingId = null;
 
 const trackData = {
-    'player-track-1': 'faOLT1uiJbI',
+    'player-track-1': 'faOLT1uiJbI', //김예인: 각 노래에 해당하는 아이디 삽입함.
     'player-track-2': 'FWZoL39oFlQ'
 };
 

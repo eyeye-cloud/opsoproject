@@ -3,8 +3,8 @@
 <head>
     <div class="container">
         <link rel="stylesheet" href="../css/stylespring.css"> 
-        <script src="https://cdn.tailwindcss.com"></script>
-        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <script src="https://cdn.tailwindcss.com"></script> <!--김예인: css 프레임워크 연결-->
+        <link rel="preconnect" href="https://fonts.googleapis.com"> <!--김예인: 폰트 연결-->
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Italiana&display=swap" rel="stylesheet">
         <title>Spring Films</title>
@@ -13,9 +13,9 @@
         <div class="header">           
             <div class="relative">
                 <h1>Spring Films</h1>
-                <button id="home-btn" class="absolute right-[3%] top-1/2 transform -translate-y-1/2 text-gray-400 hover:text-gray-500 transition-colors duration-200 group">
+                <button id="home-btn" class="absolute right-[3%] top-1/2 transform -translate-y-1/2 text-gray-400 hover:text-gray-500 transition-colors duration-200 group"> <!--김예인: 메인 페이지로 돌아가는 버튼 추가-->
                     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 25 25" class="w-8 h-8">
-                        <path class="roof stroke-gray-500 group-hover:stroke-gray-600"stroke-linecap="round" stroke-linejoin="round" stroke-width="2.3" d="M2 12 L12 3 L22 12" />
+                        <path class="roof stroke-gray-500 group-hover:stroke-gray-600"stroke-linecap="round" stroke-linejoin="round" stroke-width="2.3" d="M2 12 L12 3 L22 12" /> <!--김예인: 버튼 디자인 집 모양으로 구축-->
                         <line x1="5" y1="12" x2="5" y2="20" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
                         <line x1="19" y1="12" x2="19" y2="20" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
                         <line x1="5" y1="20" x2="19" y2="20" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
@@ -26,12 +26,12 @@
             <p class="subtitle">
                 # 새로움이 피어나는 봄, 아직 서툰 마음들이 고요히 흩어지는 때<br>
             </p>
-            <div class="movie-line1"></div>
+            <div class="movie-line1"></div> <!--김예인: 좌측 우측 끝 영화 필름 세로줄 추가-->
             <div class="movie-line2"></div>
-            <div class="perforation-container left" id="perf-left"></div>
+            <div class="perforation-container left" id="perf-left"></div> <!--김예인: 영화 필름 세로줄 내 구멍 추가-->
             <div class="perforation-container right" id="perf-right"></div>
             <div class="button">
-                <button id="prev-btn" class="prev-btn">«</button>
+                <button id="prev-btn" class="prev-btn">«</button> <!--김예인: 첫 번째 곡과 두 번째 곡 섹션 이동하는 버튼 추가-->
                 <button id="next-btn" class="next-btn">»</button>
             </div> 
         </div>
@@ -39,12 +39,12 @@
             <div class="film-strip" id="track-amber">
                 <div class="film-content">
                     <div class="film-grid">
-                        <div class="film-image">
-                            <img src="../asset/썸네일%20아카이브/나의 사춘기에게.jpg" alt="나의 사춘기에게">
+                        <div class="film-image"> <!--권용준: 곡 썸네일 연결, 김예인: 파일 경로 변경-->
+                            <img src="../asset/썸네일%20아카이브/나의 사춘기에게.jpg" alt="나의 사춘기에게"> 
                             <div class="film-overlay"></div>
                         </div>
                         
-                        <div class="film-text amber">
+                        <div class="film-text amber"> <!--권용준: 세부 페이지 첫 번째 곡 섹션 기초 구축-->
                             <div>
                                 <p class="track-label amber">TRACK 01</p>
                                 <p class="artist-name">볼빨간 사춘기</p>
@@ -52,17 +52,17 @@
                             </div>
 
                             <div class="quote-box amber">
-                                <p class="quote-line">“시간이 약이라는 말이 내게 정말 맞더라고</p>
+                                <p class="quote-line">“시간이 약이라는 말이 내게 정말 맞더라고</p> <!--김예인: 노래 가사 삽입-->
                                 <p class="quote-line">하루가 지나면 지날수록 더 나아지더라고”</p>
                             </div>
                             <div class="quote-desc">
-                                <p>내게 닥친 현실이 버거울 때, 마음을 편안히 내려놓게 해준 노래</p>
+                                <p>내게 닥친 현실이 버거울 때, 마음을 편안히 내려놓게 해준 노래</p> <!--김예인: 우리에게 힐링송인 이유 간략히 설명-->
                             </div>
                         </div>
                     </div>
                 </div>
-                    <div class="absolute bottom-[16%] left-[56%] w-1/2 z-[100]" id="player-track-1" style="--theme-color:#e84a5f">
-                    <div class="container max-w-8xl flex items-center justify-start max-w-8xl">
+                    <div class="absolute bottom-[16%] left-[56%] w-1/2 z-[100]" id="player-track-1" style="--theme-color:#e84a5f"> <!--김예인: 첫 번째 노래 재생 버튼과 재생 바 추가, 기초적인 틀 AI가 구현함. tailwindcss 사용하였음.-->
+                    <div class="container max-w-8xl flex items-center justify-start max-w-8xl"> <!--김예인: 크기와 버튼의 색상, 호버 시 변할 색상 등의 스타일 직접 조정-->
                         <div class="flex flex-col items-center w-full max-w-sm"> 
                             <div class="flex space-x-6 mb-1.5 text-gray-700 play-button-container">
                                 <button class="text-lg transition duration-150">
@@ -76,7 +76,7 @@
                                 </button>
                             </div>
                             <div class="flex items-center w-full space-x-2 text-xs text-gray-500">
-                                <span class="current-time">00:00</span>
+                                <span class="current-time">00:00</span> <!--김예인: 노래 시작 및 끝나는 시간 정확히 삽입-->
                                 <input type="range" min="0" max="100" value="0" class="timeline w-full h-1 bg-gray-300 rounded-full appearance-none cursor-pointer [&::-webkit-slider-thumb]:appearance-none [&::-webkit-slider-thumb]:w-3 [&::-webkit-slider-thumb]:h-3 [&::-webkit-slider-thumb]:bg-red-400 [&::-webkit-slider-thumb]:rounded-full [&::-webkit-slider-thumb]:shadow-md">
                                 <span class="total-time">03:43</span>
                             </div>
@@ -86,13 +86,10 @@
             </div>
 
             <div class="film-strip" id="track-rose">
-                <div class="film-perforations film-perforations-left" id="perf2left"></div>
-                <div class="film-perforations film-perforations-right" id="perf2right"></div>
-                
                 <div class="film-content">
                     <div class="film-grid" style="direction: rtl;">
                         <div style="direction: ltr;">
-                            <div class="film-text rose">
+                            <div class="film-text rose"> <!--권용준: 세부 페이지 기초 구축-->
                                 <div>
                                     <p class="track-label rose">
                                         TRACK 02</p>
@@ -100,26 +97,26 @@
                                     <h2 class="song-title rose">Give Love</h2>
                                 </div>
 
-                                <div class="quote-box rose">
-                                    <p class="quote-line">“Why baby? 뭐가 문제야 baby?</p>
+                                <div class="quote-box rose"> 
+                                    <p class="quote-line">“Why baby? 뭐가 문제야 baby?</p> <!--김예인: 노래 가사 삽입-->
                                     <p class="quote-line">주고 또 주는 사랑이 길바닥에 다 버려져 낙엽처럼 쌓이네</p>
                                     <p class="quote-line">봄이 되면 흙으로 남아 혹시 기대해 싹이 될까?”</p>
                                 </div>
                                 <div class="quote-desc">
-                                    <p>마음이 처질 때, 기분 좋은 에너지로 토닥이는 노래</p>
+                                    <p>마음이 처질 때, 기분 좋은 에너지로 토닥이는 노래</p> <!--김예인: 우리에게 힐링송인 이유 간략히 설명-->
                                 </div>
                             </div>
                         </div>
 
-                        <div class="film-image" style="direction: ltr;">
+                        <div class="film-image" style="direction: ltr;"> <!--권용준: 곡 썸네일 연결, 김예인: 파일 경로 변경-->
                             <img src="../asset/썸네일%20아카이브/Give love.jpg" alt="Give love">
                             <div class="film-overlay"></div>
                         </div>
                     </div>
                 </div>
             </div>
-                <div class="absolute bottom-[16%] left-[78%] w-1/2 z-[100]" id="player-track-2" style="--theme-color:#3ac569">
-                <div class="container max-w-8xl flex items-center justify-start max-w-8xl">
+                <div class="absolute bottom-[16%] left-[78%] w-1/2 z-[100]" id="player-track-2" style="--theme-color:#3ac569"> <!--김예인: 두 번째 노래 재생 버튼과 재생 바 추가, 기초적인 틀 AI가 구현함. tailwindcss 사용하였음.-->
+                <div class="container max-w-8xl flex items-center justify-start max-w-8xl"> <!--김예인: 크기와 버튼의 색상, 호버 시 변할 색상 등의 스타일 직접 조정-->
                     <div class="flex flex-col items-center w-full max-w-sm"> 
                         <div class="flex space-x-6 mb-1.5 text-gray-700 play-button-container">
                             <button class="text-lg transition duration-150">
@@ -133,7 +130,7 @@
                             </button>
                         </div>
                         <div class="flex items-center w-full space-x-2 text-xs text-gray-500">
-                            <span class="current-time">00:00</span>
+                            <span class="current-time">00:00</span> <!--김예인: 노래 시작 및 끝나는 시간 정확히 삽입-->
                             <input type="range" min="0" max="100" value="0" class="timeline w-full h-1 bg-gray-300 rounded-full appearance-none cursor-pointer [&::-webkit-slider-thumb]:appearance-none [&::-webkit-slider-thumb]:w-3 [&::-webkit-slider-thumb]:h-3 [&::-webkit-slider-thumb]:bg-green-400 [&::-webkit-slider-thumb]:rounded-full [&::-webkit-slider-thumb]:shadow-md">
                             <span class="total-time">03:02</span>
                         </div>
@@ -144,7 +141,7 @@
 </body>
 
 <script>
-var tag = document.createElement('script');
+var tag = document.createElement('script'); //김예인: 유튜브 링크 연결 기능. AI가 구현하였음.
 tag.src = "https://www.youtube.com/iframe_api";
 document.head.appendChild(tag);
 
@@ -152,11 +149,11 @@ let players = {};
 let currentPlayingId = null;
 
 const trackData = {
-    'player-track-1': '3gMAEZCOFtE',
+    'player-track-1': '3gMAEZCOFtE', //김예인: 각 노래에 해당하는 아이디 삽입함.
     'player-track-2': 'gRf0yRIF-Ik'
 };
 
-function onYouTubeIframeAPIReady() {
+function onYouTubeIframeAPIReady() { //김예인: 영상이 백그라운드에서 재생될 수 있도록 hidden container 기능 구현. AI가 구현하였음.
     const hiddenContainer = document.createElement('div');
     hiddenContainer.id = 'youtube-hidden-container';
     hiddenContainer.style.display = 'none';
@@ -175,7 +172,7 @@ function onYouTubeIframeAPIReady() {
     });
 }
 
-function onPlayerStateChange(event) {
+function onPlayerStateChange(event) { //김예인: 재생 버튼 클릭 시 유튜브 노래 백그라운드에서 재생하는 기능. AI가 구현하였음.
     const id = event.target.getIframe().id.replace("youtube-player-iframe-","");
     const btn = document.querySelector(`#${id} .play-btn`);
     if(!btn) return;
@@ -187,7 +184,7 @@ function onPlayerStateChange(event) {
     }
 }
 
-function updateProgressBar(id){
+function updateProgressBar(id){ //김예인: 노래 시간에 맞게 재생 바 이동하는 기능. AI가 구현하였음.
     const player = players[id];
     const bar = document.querySelector(`#${id} .timeline`);
     const currentEl = document.querySelector(`#${id} .current-time`);
@@ -217,7 +214,7 @@ function formatTime(sec){
     return `${String(m).padStart(2,'0')}:${String(s).padStart(2,'0')}`;
 }
 
-function togglePlay(id){
+function togglePlay(id){ //김예인: 다음 곡 섹션으로 넘어가면 곡 재생 멈추는 기능. AI가 구현하였음.
     const p = players[id];
     if(!p) return;
 
@@ -283,11 +280,11 @@ function fadeOut(player, duration = 400) {
 
 let userSeeking = false;
 
-document.addEventListener("mousedown", e=>{
+document.addEventListener("mousedown", e=>{ //김예인: 마우스 움직임으로 재생 바 이동 기능 구현. AI가 구현하였음.
     const bar=e.target.closest(".timeline");
     if(!bar) return;
 
-    userSeeking = true;
+    userSeeking = true; //김예인: mousedown 시 노래가 fade out하면서 멈추도록 함. AI가 구현하였음.
     if(currentPlayingId && players[currentPlayingId]){
         fadeOut(players[currentPlayingId],200); 
     }
@@ -303,7 +300,7 @@ document.addEventListener("input", e=>{
     player.seekTo((bar.value/100)*duration,true);
 });
 
-document.addEventListener("mouseup", e=>{
+document.addEventListener("mouseup", e=>{ //김예인: 마우스 움직임으로 재생 바 이동 기능 구현. AI가 구현하였음.
     if(!userSeeking) return;
     userSeeking=false;
 
@@ -313,7 +310,7 @@ document.addEventListener("mouseup", e=>{
     const parent=bar.closest(".absolute").id;
     const player=players[parent];
 
-    player.playVideo();     
+    player.playVideo(); //김예인: mouseup 시 노래가 fade in하면서 시작하도록 함. AI가 구현하였음.
     fadeIn(player,400); 
 });
 </script>
@@ -326,7 +323,7 @@ document.addEventListener('DOMContentLoaded', function() {
     const prevBtn = document.getElementById('prev-btn');
     const nextBtn = document.getElementById('next-btn');
 
-    let currentTrack = 1;
+    let currentTrack = 1; //김예인: 페이지가 초기화되어도 첫 번째 곡 섹션이 항상 먼저 나오도록 함. AI가 구현하였음.
     const totalTracks = 2;
 
     const initialOffset = (currentTrack - 1) * -50;
@@ -340,7 +337,7 @@ document.addEventListener('DOMContentLoaded', function() {
         prevBtn.disabled = (currentTrack === 1);
         nextBtn.disabled = (currentTrack === totalTracks);
 
-        const subtitle = document.querySelector(".subtitle");
+        const subtitle = document.querySelector(".subtitle"); //김예인: 곡 섹션 넘어가면 해당 곡에 맞는 색상으로 subtitle 색 자연스럽게 변경되도록 함. AI가 구현하였음.
         if(currentTrack === 1){
             subtitle.classList.remove("green-theme");
             subtitle.classList.add("red-theme");
@@ -395,7 +392,7 @@ document.addEventListener('DOMContentLoaded', function() {
             });
         }
 
-document.getElementById('home-btn').addEventListener('click', () => {
+document.getElementById('home-btn').addEventListener('click', () => { //김예인: 돌아가기 버튼과 메인 페이지 연결. AI가 구현하였음.
     window.location.href = 'https://eyeye-cloud.github.io/opsoproject/';
 });
 </script>

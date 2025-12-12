@@ -1,4 +1,4 @@
-const firstPage = document.querySelector('.first-page-section'); 
+const firstPage = document.querySelector('.first-page-section'); // 최선민: 메인 페이지 자바 스크립트 기능 구현. 스크롤 시 투명도가 변하며 올라오거나 내려가는 기능 구현. AI가 구현하였음.
 const secondPage = document.querySelector('.second-page-section');
 const allSeasonalElements = document.querySelectorAll('.spring-image, .spring-title, .summer-image, .summer-title, .autumn-image, .autumn-title, .winter-image, .winter-title');
 

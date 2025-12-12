@@ -1,16 +1,16 @@
-html {
+html { /*최선민: 페이지 스크롤 y축으로 가능하게, x축은 화면 고정, 스크롤 부드럽게 구현*/
     overflow-y: scroll; 
     overflow-x: hidden;
     scroll-behavior: smooth;
 }
 
-body {
+body { /*권용준: 기본 바탕색 검은색으로 지정*/
     margin: 0;
     padding: 0;
     background-color: #000000; 
 }
 
-.first-page-section {
+.first-page-section { /*권용준: 메인 페이지 첫 번째 섹션이 부드럽게 올라오도록 구현*/
     height: 100vh;
     position: relative; 
     transition: transform 1.3s ease-out, opacity 0.5s ease-out;
@@ -25,19 +25,20 @@ body {
     position: relative; 
     top: 0; 
     right: 0;
-    width: 80%; 
+    width: 80%; /*김예인: 반응형으로 구현하기 위해 비율로 조정함.*/
     height: 10%; 
 }
 
 .diamond-wrapper {
     position: absolute; 
-    width: 14.5vh;
+    width: 14.5vh; /*김예인: 반응형으로 구현하기 위해 사용자 뷰포트 비율로 조정함.*/
     height: 9.7vh;
-    transform: skewX(30deg);
+    transform: skewX(30deg); 
     background-color: rgb(244, 244, 244);
-    top: 30%;
+    top: 30%; /*김예인: 반응형으로 구현하기 위해 비율로 조정함.*/
 }
 
+/*김예인: item-1 ~ item-8까지 반응형으로 구현하기 위해 슬레이트 도형의 위치를 비율로 조정함.*/
 .item-1 {
     left: 31%; 
 }
@@ -72,14 +73,15 @@ body {
 
 .top-title {
     position: absolute;
-    top: 1.2%;
+    top: 1.2%; /*김예인: 반응형으로 구현하기 위해 비율로 조정함.*/
     left: 3.6%;
     color: #ffffff;
-    font-size: 10.96vh;
-    font-family: 'Italiana', sans-serif;
+    font-size: 10.96vh; /*김예인: 반응형으로 구현하기 위해 뷰포트 비율로 조정함\.*/
+    font-family: 'Italiana', sans-serif; /*최선민: Italiana 적용 및 폰트 사이즈 조절*/
     font-weight: 400;
 }
-.top-image {
+
+.top-image { /*김예인: 반응형으로 구현하기 위해 비율로 조정함.*/
     position: absolute;
     top: 17.5%;
     left: 4.95%;
@@ -88,19 +90,19 @@ body {
     height: 120vh;
 }
 
-.top-image img {
+.top-image img { /*권용준: 메인 페이지 명화 이미지 비율 조정*/
     width: 137%;
     height: 66%;
 }
 
-.logo-image {
+.logo-image { /*김예인: 한양대 로고 이미지 위치 조정. 반응형으로 구현하기 위해 비율로 조정함.*/
     position: absolute;
     top: 9.5%;
     left: 17.5%;
 
     width: 121.05vh; 
     height: 120vh;
-    z-index: 10;
+    z-index: 10; /*김예인: 다른 요소에 가려지지 않도록 z-index 값을 높게 설정함.*/
 }
 
 .logo-image img {
@@ -110,44 +112,44 @@ body {
 
 .middle-box {
     position: absolute; 
-    width: 31.5vh; 
+    width: 31.5vh; /*김예인: 반응형으로 구현하기 위해 비율로 조정함.*/
     height: 120vh;
 
     background-color: #000000; 
-    top: 17.5%;
+    top: 17.5%; /*김예인: 반응형으로 구현하기 위해 비율로 조정함.*/
     left: 19.1%;
     z-index: 5;
 }
 
 .middle-title {
     position: absolute;
-    top: 17.5%;
+    top: 17.5%; /*김예인: 반응형으로 구현하기 위해 비율로 조정함.*/
     left: 20.25%;
     color: #ffffff;
     font-size: 6.9vh;
-    z-index: 10;
-    font-family: 'Italiana', sans-serif;
+    z-index: 10; /*권용준: middle-box에 가려지지 않도록 z-index 높은 값으로 설정*/
+    font-family: 'Italiana', sans-serif; /*최선민: Italiana 적용 및 폰트 사이즈 조절*/
     font-weight: 400;
     opacity: 0;
-    transform: translateY(30px);
+    transform: translateY(30px); /*김예인: 아래에서 위로 올라오는 모션 구현*/
     animation-fill-mode: forwards;
 }
 
 .middle-text {
     position: absolute;
-    top: 51.7%;
+    top: 51.7%; /*김예인: 반응형으로 구현하기 위해 비율로 조정함.*/
     left: 20.22%;
     color: #ffffff;
     font-size: 2.27vh;
-    z-index: 10;  
+    z-index: 10; /*권용준: middle-box에 가려지지 않도록 z-index 높은 값으로 설정*/
     font-style: italic;
     font-weight: 300;
     opacity: 0;
-    transform: translateY(30px);
+    transform: translateY(30px); /*김예인: 아래에서 위로 올라오는 모션 구현*/
     animation-fill-mode: forwards;
 }
 
-@keyframes fadeUp {
+@keyframes fadeUp { /*김예인: 아래에서 위로 올라오면서 투명도가 높아지게 함.*/
     0% {
         opacity: 0;
         transform: translateY(5px);
@@ -163,24 +165,24 @@ body {
 }
 
 .middle-text {
-    animation: fadeUp 1s ease-out 0.45s forwards; 
+    animation: fadeUp 1s ease-out 0.45s forwards;  /*김예인: middle title이 올라온 후, middle text가 올라오도록 시간 조정*/
 }
 
 .fade-in {
-    opacity: 0.9 !important;
+    opacity: 0.9 !important; /*최선민: 계절 섹션도 fade in 적용*/
 }
 
 .second-page-section {
     position: relative;
     padding-top: 100px;
-    height: 82vh; 
+    height: 82vh; /*김예인: 반응형으로 구현하기 위해 비율로 조정함.*/
     min-height: 82vh;
     opacity: 0;
     transition: opacity 0.7s ease-out;
 }
 
 .second-page-section div[class='-image'], 
-.second-page-section div[class='-title'] {
+.second-page-section div[class='-title'] { /*최선민: 계절 섹션도 fade in 적용*/
     opacity: 0 !important;
     transition: opacity 0.4s ease-out;
     transform: none !important;
@@ -194,11 +196,11 @@ body {
 .spring-image {
     position: absolute;
     top: 0px;
-    left: 0%;
+    left: 0%; /*김예인: 반응형으로 구현하기 위해 비율로 조정함.*/
     width: 25%;
     height: 82vh;
     overflow: hidden;
-    mask-image: 
+    mask-image: /*권용준: 계절 이미지에 검은색 선형 그라데이션 삽입*/
         linear-gradient(to bottom, black 70%, transparent 100%);
     -webkit-mask-image:
         linear-gradient(to bottom, black 70%, transparent 100%);
@@ -207,21 +209,21 @@ body {
 .spring-title {
     position: absolute;
     bottom: 0px;
-    left: 7%;
+    left: 7%; /*김예인: 반응형으로 구현하기 위해 비율로 조정함.*/
     color: #ffffff;
     font-size: 7.3vh;
-    font-family: 'Italiana', sans-serif;
+    font-family: 'Italiana', sans-serif; /*최선민: Italiana 적용 및 폰트 사이즈 조절*/
     font-weight: 550;
 }
 
 .summer-image {
     position: absolute;
     top: 148px;
-    left: 25%;
+    left: 25%; /*김예인: 반응형으로 구현하기 위해 비율로 조정함.*/
     width: 25%;
     height: 82vh;
     overflow: hidden;
-    mask-image:
+    mask-image: /*권용준: 계절 이미지에 검은색 선형 그라데이션 삽입*/
         linear-gradient(to top, black 70%, transparent 100%);
     -webkit-mask-image: 
         linear-gradient(to top, black 70%, transparent 100%);
@@ -230,21 +232,21 @@ body {
 .summer-title {
     position: absolute;
     top: 30px;
-    left: 31%;
+    left: 31%; /*김예인: 반응형으로 구현하기 위해 비율로 조정함.*/
     color: #ffffff;
     font-size: 7.3vh;
-    font-family: 'Italiana', sans-serif;
+    font-family: 'Italiana', sans-serif; /*최선민: Italiana 적용 및 폰트 사이즈 조절*/
     font-weight: 550;
 }
 
 .autumn-image {
     position: absolute;
     top: 0px;
-    left: 50%;
+    left: 50%; /*김예인: 반응형으로 구현하기 위해 비율로 조정함.*/
     width: 25%;
     height: 82vh;
     overflow: hidden;
-    mask-image: 
+    mask-image: /*권용준: 계절 이미지에 검은색 선형 그라데이션 삽입*/
         linear-gradient(to bottom, black 70%, transparent 100%);
     -webkit-mask-image: 
         linear-gradient(to bottom, black 70%, transparent 100%);
@@ -253,21 +255,21 @@ body {
 .autumn-title {
     position: absolute;
     bottom: 0;
-    left: 56%;
+    left: 56%; /*김예인: 반응형으로 구현하기 위해 비율로 조정함.*/
     color: #ffffff;
     font-size: 7.3vh;
-    font-family: 'Italiana', sans-serif;
+    font-family: 'Italiana', sans-serif; /*최선민: Italiana 적용 및 폰트 사이즈 조절*/
     font-weight: 550;
 }
 
 .winter-image {
     position: absolute;
     top: 148px;
-    left: 75%;
+    left: 75%; /*김예인: 반응형으로 구현하기 위해 비율로 조정함.*/
     width: 25%;
     height: 82vh;
     overflow: hidden;
-    mask-image:
+    mask-image: /*권용준: 계절 이미지에 검은색 선형 그라데이션 삽입*/
         linear-gradient(to top, black 70%, transparent 100%);
     -webkit-mask-image:
         linear-gradient(to top, black 70%, transparent 100%);
@@ -276,10 +278,10 @@ body {
 .winter-title {
     position: absolute;
     top: 30px;
-    left: 82.3%;
+    left: 82.3%; /*김예인: 반응형으로 구현하기 위해 비율로 조정함.*/
     color: #ffffff;
     font-size: 7.3vh;
-    font-family: 'Italiana', sans-serif;
+    font-family: 'Italiana', sans-serif; /*최선민: Italiana 적용 및 폰트 사이즈 조절*/
     font-weight: 550;
 }
 
@@ -290,7 +292,7 @@ body {
     width: 100%;  
     height: 100%;
     object-fit: cover;
-    transition: opacity 0.3s ease-in-out;
+    transition: opacity 0.3s ease-in-out; /*권용준: 계절 이미지 호버 시 투명도 감소하도록 구현*/
     display: block;
 }
 
@@ -299,11 +301,11 @@ body {
 .autumn-image:hover img,
 .winter-image:hover img {
     opacity: 0.6;
-    cursor: pointer;
+    cursor: pointer; /*권용준: 계절 이미지 호버 시 투명도 감소하도록 구현*/
 }
 
 .italiana-regular {
-  font-family: 'Italiana', sans-serif;
+  font-family: 'Italiana', sans-serif; /*최선민: Italiana 부모 클래스 생성*/
   font-style: normal;
 }
 

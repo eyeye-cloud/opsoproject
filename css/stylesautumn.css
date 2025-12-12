@@ -1,4 +1,4 @@
-:root {
+:root { /*김서진: 봄 세부 페이지 디자인 틀을 가을 세부 페이지에 적용, 해당 색상을 테마에 맞는 색상으로 변경함.*/
             --color-cream: #ffffff;
             --color-amber-900: #070707;
             --color-amber-800: #be967a;
@@ -58,14 +58,14 @@
             font-weight: 800;
             color: #0c0c0c;
             margin-bottom: 0.2rem;
-            margin-top: 1vh;
+            margin-top: 1vh; /*김예인: 세부 페이지 짤리는 현상 해결하기 위해 비율 조정함.*/
             font-family: 'Italiana', sans-serif;
             letter-spacing: 2.8px;
             margin-left: 1rem;
         }
 
         .subtitle {
-            color: #a07e57;
+            color: #a07e57; /*김예인: 눈에 더 잘보이는 색으로 변경*/
             opacity: 0.5;
             font-style: italic;
             font-weight: 500;
@@ -74,7 +74,7 @@
             transition: color .4s ease;
         }
 
-        .subtitle.red-theme {
+        .subtitle.red-theme { /*김예인: 곡마다 테마 색 지정함.*/
             color: #a07e57;
         }
 
@@ -232,7 +232,7 @@
             margin-bottom: 0.5rem;
         }
 
-        .track-label.amber { color: var(--color-amber-400); }
+        .track-label.amber { color: var(--color-amber-400); } /*김예인: 트랙 라벨 색상을 더 잘 어울리는 색으로 변경*/
         .track-label.rose { color: var(--color-rose-700); }
 
         .artist-name {
@@ -257,13 +257,13 @@
         }
 
         .quote-box.amber {
-            border-color: var(--color-amber-400);
-            background-color: rgba(215, 184, 154, 0.168);
+            border-color: var(--color-amber-400); /*김예인: 가사 칸 왼쪽 경계선 색상을 더 잘 어울리는 색으로 변경*/
+            background-color: rgba(215, 184, 154, 0.168); /*김예인: 가사 뒷 배경 색상을 더 잘 어울리는 색으로 변경*/
         }
 
         .quote-box.rose {
             border-color: var(--color-rose-400);
-            background-color: rgba(207, 217, 204, 0.3);
+            background-color: rgba(207, 217, 204, 0.3); /*김예인: 가사 뒷 배경 색상을 더 잘 어울리는 색으로 변경*/
         }
 
         .quote-line {
